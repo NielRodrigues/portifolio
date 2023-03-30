@@ -1,0 +1,47 @@
+[
+    {
+        "link": "Ping Pong/index",
+        "repository": "https://github.com/NielRodrigues/ping-pong",
+        "img": "ping-pong.png",
+        "title": "PING PONG",
+        "description": "Esse é um projeto básico desenvolvido pelo canvas no HTML. É um jogo que manipula a posição de elementos na tela em tempo real.",
+        "date": "02-22-2023",
+        "tech": ["html5", "css3", "javascript"]
+    },
+    {
+        "link": "Gerador de Senhas/index",
+        "repository": "https://github.com/NielRodrigues/Gerador-de-Senhas",
+        "img": "gerador-de-senhas.png",
+        "title": "Gerador de Senhas",
+        "description": "Nesse projeto de Gerador de Senhas foi feito manipulação de HTML e CSS com DOM utilizando Javascript, além de funções desenvolvidas para edição desses elementos, com estruturas de decisão e repetição.",
+        "date": "03-02-2023",
+        "tech": ["html5", "css3", "javascript"]
+    },
+    {
+        "link": "https://carlosdanieldev.netlify.app/",
+        "repository": "https://github.com/NielRodrigues/portfolio",
+        "img": "portifolio.png",
+        "title": "Portifólio",
+        "description": "Esse portifólio foi desenvolvido por mim utilizando os meus conhecimentos avançados em HTML5, CSS3 e Javascript. Para esse portifólio, primeiramente, eu desenvolvi o design no Figma aplicando meus habilidades como UX/UI Design. Eu também utilizei o pré-processador CSS para construir esse site, o SASS. Algumas bibliotecas como Typed.JS e Owl Carousel foram utilizadas nesse portifólio para esse site. Eu também desenvolvi animações para o Menu Mobile utilizando Javascript e CSS, aplicando também os conceitos de responsividade. Em Javascript eu apliquei também meu conhecimentos em AJAX para consumir um API pra envio de dados do formulário para meu email.",
+        "date": "03-21-2023",
+        "tech": ["html5", "css3", "javascript", "sass"]
+    },
+    {
+        "link": "https://cr-reservadehotel-2703.netlify.app/",
+        "repository": "https://github.com/NielRodrigues/Reserva-de-Hotel",
+        "img": "reserva-de-hotel.png",
+        "title": "Reserva de Hotel",
+        "description": "Esse foi um projeto que eu desenvolvi para aplicar os meus conhecimentos no framework de 'Bootstrap'. O projeto tinha como principal objetivo em utilizar classes do Bootstrap, trabalhar com tags e formulários. Não foi feita nenhuma automoção utilizando Javascript para esse projeto. Eu apenas apliquei meus conhecimentos para trabalhar com UX/UI Design, bem como conhecimentos avançandos em HTML e CSS. Para esse projeto eu utilizei, além de HTML5 e CSS3, o pré-processador CSS, o Sass, como também Framework do CSS, o Bootstrap. Eu também utilizei alguma bibliotecas como a Font Awesome e Materialize Icons.",
+        "date": "03-27-2023",
+        "tech": ["html5", "css3", "bootstrap", "sass"]
+    },
+    {
+        "link": "https://cr-todolist-2903.netlify.app/",
+        "repository": "https://github.com/NielRodrigues/To-Do-List",
+        "img": "lista-de-tarefas.png",
+        "title": "Lista de Tarefas",
+        "description": "Meu primeiro projeto em React JS. Esse projeto eu desenvolvi para aplicar meus conhecimentos em React JS e também meus conhecimentos em HTML CSS e Javascript. O projeto consiste numa lista de tarefas simples em que o usuário adicione ou exclua tarefas em uma lista. Nesse projeto eu não trabalhei com o Local Storage, logo as informações são resetadas quando o usuário recarrega a página, isso porque o foco não era trabalhar com a memória local, sendo assim o projeto foi apenas para aplicar os conhecimentos, fundamentos e conceitos do React, como os: States, Components, Props, JSX, etc...",
+        "date": "03-29-2023",
+        "tech": ["html5", "css3", "javascript", "react"]
+    }
+]

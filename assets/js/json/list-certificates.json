@@ -1,0 +1,67 @@
+[
+    {
+        "link": "JavaScript Básico",
+        "img": "javascript.svg", 
+        "title": "JavaScript Básico",
+        "description": "Nesse curso de Javascript eu entendi toda básica dessa linguagem, iniciando com variávies, expressões e operadores, estrutura de decisão e repetição, etc.",
+        "date": "02-22-2023",
+        "tech": ["javascript"]
+    },
+    {
+        "link": "Lógica de Programação Básica",
+        "img": "programacao.png",
+        "title": "LÓGICA EM PROGRAMAÇÃO - Básica",
+        "description": "Esse é um certificado do curso de Lógica em Programação Básica que eu tive no curso Front End Master do Dev Samurai.",
+        "date": "02-22-2023",
+        "tech": []
+    },
+    {
+        "link": "Lógica de Programação Avançada",
+        "img": "programacao.png", 
+        "title": "LÓGICA EM PROGRAMAÇÃO - Avançada",
+        "description": "Nesse curso eu aprendi como um código funciona na prática, como é sua interação dele com a máquina, além de estruturas mais avançadas.",
+        "date": "02-22-2023",
+        "tech": []
+    },
+    {
+        "link": "JavaScript Avançado",
+        "img": "javascript.svg", 
+        "title": "JavaScript Avançado",
+        "description": "Já nesse curso avnaçado de Javascript, eu aprendi sobre Funções, Manipulação de Dados, Manipulação de Array, DOM, Promises, JSON, Ajax, etc.",
+        "date": "02-28-2023",
+        "tech": ["javascript"]
+    },
+    {
+        "link": "HTML para Programadores",
+        "img": "html5.svg",
+        "title": "HTML PARA PROGRAMADORES",
+        "description": "Aqui eu aprendi toda estrutura do HTML. Além dos conceitos básicos e sobre as principais tags, formulários, listas, tabelas, etc.",
+        "date": "03-01-2023",
+        "tech": ["html5"]
+    },
+    {
+        "link": "TypeScript Básico",
+        "img": "typescript.svg", 
+        "title": "TypeScript Básico",
+        "description": "No curso de TypeScript da Dev Samurai eu aprendi os conceitos básicos, a Tipagem de Dados, Orientação a Obejtos, Funções, etc.",
+        "date": "03-03-2023",
+        "tech": ["typescript"]
+    },
+    {
+        "link": "Entendendo o HTML com o CSS",
+        "img": "html5.svg",
+        "title": "Entendendo o HTML com o CSS",
+        "description": "No curso de HTML com CSS eu aprendi sobre os conceitos de Tags, os atributos que cada um pode receber, além da integração da página HTML com CSS. Sobre o conceitos de formulários, a sintaxe do CSS, seletores, cores, textos, etc.",
+        "date": "03-12-2023",
+        "tech": ["html5", "css3"]
+    },
+    {
+        "link": "Websites com Bootstrap",
+        "img": "bootstrap.svg",
+        "title": "Websites com Bootstrap",
+        "description": "Nesse curso eu aprendi sobre o framework do CSS 'Bootstrap', na qual eu não o conhecia e pude conhecer e desenvolver meus porjetos com classes prontas e pre estabelecidas pelo framework, o que possibilita em uma produtividade mais eficiente.",
+        "date": "03-23-2023",
+        "tech": ["bootstrap"]
+    }
+
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "img": "course-dev-samurai.png",
+        "title": "CURSO FRONT END MASTER",
+        "description": "O curso 'Front End Master' é um curso do Dev Samurai que eu adquiri para aprimorar minhas habilidades e conhecimentos para construção de sites e aplicações web. Através desse curso eu consegui desenvolver muitos projetos, além de aprender os fundamentos básicos e avançados do HTML5, CSS3, JavaScript, TypeScript, React, Node JS, Bootstrap, dentre outras tecnologias e frameworks",
+        "date": "02-14-2023",
+        "tech": ["html5", "css3", "javascript", "typescript", "node js", "react"]
+    },
+    {
+        "img": "course-udemy.png",
+        "title": "CURSO typescript - udemy",
+        "description": "No curso de TypeScript básico da UDEMY eu aprendi todos os conceitos básico de tipagem de dados do Typescript, além do básico de Orientação a Objetos em Typescript.",
+        "date": "03-06-2023",
+        "tech": ["typescript"]
+    },
+    {
+        "img": "course-python.jpg",
+        "title": "CURSO pyhton - curso em vídeo",
+        "description": "O curso de Pyhton do 'Curso em Vídeo', é um curso gratuito que eu fiz. Ele foi o primeiro curso focado em Back End que eu fiz desde quando eu aprendi C++ na escola.",
+        "date": "01-01-2022",
+        "tech": ["python"]
+    }
+]

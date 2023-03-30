@@ -1,0 +1,2816 @@
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Kdam+Thmor+Pro&family=Lato:wght@400;700;900&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@300&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/* SCROLL BAR CSS*/
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #9061FF;
+  width: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #F3F3F3;
+  background-color: #0c0d0f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body div.bg-menu {
+  height: 100%;
+  width: 240px;
+  background-color: #141518;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+  margin-left: -240px;
+  z-index: 1;
+  display: none;
+}
+
+/* ============================== HEADER ==============================*/
+header {
+  width: 100%;
+  height: 64px;
+  background-color: #141518;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header section {
+  width: 100%;
+  max-width: 1200px;
+  height: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+header section img#logo {
+  height: 56px;
+  width: auto;
+}
+header section img.responsive {
+  display: none;
+  margin-left: 16px;
+}
+header section nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+}
+header section nav ul li {
+  text-decoration: none;
+  list-style: none;
+  margin: 0 16px 0 16px; /*top right bottom left*/
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+header section nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid transparent;
+  transition: all 0.5s;
+}
+header section nav ul li a h1 {
+  color: #C2C3C3;
+  font-size: 16px;
+  width: 100%;
+  font-weight: 400;
+  text-align: center;
+}
+header section nav ul li a:hover {
+  border-bottom: 1px solid #9061FF;
+}
+header section nav ul li a:hover h1 {
+  color: #F3F3F3;
+}
+header section nav, header section ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100%;
+}
+header section nav.mobile {
+  display: none;
+}
+header section a#contact-button {
+  text-decoration: none;
+}
+header section a#contact-button div.layout-button-contact-nav-bar {
+  height: 40px;
+  border: 1px solid #C2C3C3;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 8px;
+}
+header section a#contact-button div.layout-button-contact-nav-bar svg {
+  width: 20px;
+  height: 20px;
+  padding-left: 16px;
+  margin-right: 8px;
+}
+header section a#contact-button div.layout-button-contact-nav-bar svg path {
+  fill: #C2C3C3;
+}
+header section a#contact-button div.layout-button-contact-nav-bar h1 {
+  color: #C2C3C3;
+  font-size: 16px;
+  padding-right: 16px;
+  font-weight: 400;
+}
+header section a#contact-button:hover div {
+  border: 1px solid #9061FF;
+  box-shadow: 0px 0px 3px #9061FF;
+}
+header section a#contact-button:active div {
+  border: 1px solid #9061FF;
+  background-color: #9061FF;
+}
+header section a#contact-button:active div svg path {
+  fill: #F3F3F3;
+}
+header section a#contact-button:active div h1 {
+  color: #F3F3F3;
+}
+header section button#menu-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background-color: #1B1C1E;
+  cursor: pointer;
+  height: 15px;
+  width: 20px;
+  transition: all 0.5s;
+  justify-content: space-between;
+  display: none;
+  margin-right: 16px;
+}
+header section button#menu-mobile div.line {
+  width: 100%;
+  height: 2px;
+  border-radius: 5px;
+  background-color: #C2C3C3;
+  transition: all 0.5s;
+}
+header section button#menu-mobile div.line:focus {
+  background-color: #9061FF;
+}
+header section button.menu-icon div#line3 {
+  margin-bottom: 0;
+}
+header section button.x-icon div#line1 {
+  transform: rotate(-135deg);
+  width: 25px;
+  margin-top: 8px;
+}
+header section button.x-icon div#line2 {
+  display: none;
+}
+header section button.x-icon div#line3 {
+  margin-bottom: 0;
+  transform: rotate(-45deg);
+  width: 25px;
+  margin-bottom: 6px;
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 880px) {
+  header section a#contact-button {
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  header section {
+    justify-content: space-between;
+  }
+  header section img.default {
+    display: none;
+  }
+  header section img.responsive {
+    display: block;
+  }
+}
+@media (max-width: 650px) {
+  body div.bg-menu {
+    display: block;
+  }
+  header section button#menu-mobile {
+    display: flex;
+  }
+  header section nav.default {
+    display: none;
+  }
+  header section nav.mobile, header section ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header section nav.mobile {
+    display: flex;
+    position: fixed;
+    top: 64px;
+    left: 16px;
+    display: flex;
+    transition: all 0.5s;
+    margin-left: -240px;
+    z-index: 2;
+  }
+  header section nav.mobile ul li {
+    height: 16px;
+    margin-top: 16px;
+    border-bottom: none;
+  }
+  header section nav.mobile ul li a {
+    border-bottom: none;
+    border-left: 1px solid transparent;
+  }
+  header section nav.mobile ul li a h1 {
+    padding-left: 8px;
+    margin-top: 8px;
+    border-bottom: none;
+    border-left: 1px solid transparent;
+  }
+  header section nav.mobile ul li a:hover {
+    border-bottom: none;
+  }
+  header section nav.mobile ul li a:hover h1 {
+    border-bottom: none;
+    border-left: 1px solid #9061FF;
+  }
+}
+/* -----------------------------------------------*/
+/* ====================================================================*/
+/* ================================ WPP ================================*/
+a.link-wpp {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  display: none;
+  z-index: 9999;
+}
+
+div#wpp {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #25D366;
+}
+
+svg.wpp {
+  width: 32px;
+  height: 32px;
+  display: block;
+  margin: 0 auto;
+}
+
+svg.wpp path {
+  fill: #F3F3F3;
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 880px) {
+  a.link-wpp, div#wpp {
+    display: flex;
+  }
+}
+/* -----------------------------------------------*/
+/* ====================================================================*/
+/* ================================ MAIN ================================*/
+main {
+  width: 100%;
+  max-width: 1360px;
+  height: 90vh;
+  max-height: 1000px;
+  background-image: url("../../src/image/background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main section#init {
+  width: 100%;
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main section#init div#name-buttons-media {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 75%;
+  margin: auto;
+  justify-content: space-between;
+}
+main section#init div#name-buttons-media div.name-and-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.name {
+  display: flex;
+  flex-direction: column;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.name h3 {
+  font-size: 24px;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.name h1 {
+  font-size: 52px;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.name h2 {
+  font-size: 32px;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.name h2 span {
+  color: #9061FF;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 24px;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.buttons a.link-hire-me {
+  text-decoration: none;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.buttons a.link-hire-me div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  border-radius: 8px;
+  background-color: #9061FF;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.buttons a.link-hire-me div svg {
+  width: 20px;
+  height: 20px;
+  padding-left: 16px;
+  margin-right: 8px;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.buttons a.link-hire-me div svg path {
+  fill: #F3F3F3;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.buttons a.link-hire-me div h1 {
+  color: #F3F3F3;
+  font-size: 16px;
+  padding-right: 16px;
+  font-weight: 400;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.buttons a.link-hire-me:hover div {
+  transform: scale(104%);
+  box-shadow: 0px 0px 3px #9061FF;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.buttons a.link-hire-me:focus div {
+  border: 1px solid #9061FF;
+  background-color: transparent;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.buttons a.link-see-portfolio {
+  color: #F3F3F3;
+  margin-left: 24px;
+  transition: all 0.2s;
+}
+main section#init div#name-buttons-media div.name-and-buttons div.buttons a.link-see-portfolio:hover {
+  transform: scale(104%);
+}
+main section#init div#name-buttons-media div.name-and-buttons div.buttons a.link-see-portfolio:focus {
+  color: #9061FF;
+}
+main section#init div#name-buttons-media div.media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main section#init div#name-buttons-media div.media h2 {
+  font-weight: 500;
+  font-size: 16px;
+}
+main section#init div#name-buttons-media div.media div.links-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main section#init div#name-buttons-media div.media div.links-media a#link-social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+main section#init div#name-buttons-media div.media div.links-media a#link-social-media div {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #141518;
+  margin: 0 0 0 12px;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+main section#init div#name-buttons-media div.media div.links-media a#link-social-media div svg {
+  display: block;
+  margin: 0 auto;
+  height: 24px;
+  width: 24px;
+  fill: #F3F3F3;
+}
+main section#init div#name-buttons-media div.media div.links-media a#link-social-media div svg path {
+  fill: #F3F3F3;
+}
+main section#init div#name-buttons-media div.media div.links-media a#link-social-media:hover div svg {
+  fill: #9061FF;
+}
+main section#init div#name-buttons-media div.media div.links-media a#link-social-media:hover div svg path {
+  fill: #9061FF;
+}
+main section#init div#name-buttons-media div.media div.links-media a#link-social-media:active div {
+  background-color: #9061FF;
+}
+main section#init div#name-buttons-media div.media div.links-media a#link-social-media:active div svg {
+  fill: #F3F3F3;
+}
+main section#init div#name-buttons-media div.media div.links-media a#link-social-media:active div svg path {
+  fill: #F3F3F3;
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 1200px) {
+  main section#init div#name-buttons-media {
+    margin-left: 24px;
+  }
+}
+@media (max-width: 750px) {
+  main section#init div#name-buttons-media div.name-and-buttons div.name h3 {
+    font-size: 20px;
+  }
+  main section#init div#name-buttons-media div.name-and-buttons div.name h1 {
+    font-size: 48px;
+  }
+  main section#init div#name-buttons-media div.name-and-buttons div.name h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 500px) {
+  main section#init div#name-buttons-media {
+    margin-left: 0;
+    align-items: center;
+  }
+  main section#init div#name-buttons-media div.name-and-buttons {
+    width: 90%;
+  }
+  main section#init div#name-buttons-media div.name-and-buttons div.name h3 {
+    font-size: 16px;
+  }
+  main section#init div#name-buttons-media div.name-and-buttons div.name h1 {
+    font-size: 40px;
+  }
+  main section#init div#name-buttons-media div.name-and-buttons div.name h2 {
+    font-size: 24px;
+  }
+  main section#init div#name-buttons-media div.media {
+    flex-direction: column;
+  }
+  main section#init div#name-buttons-media div.media h2 {
+    margin-bottom: 8px;
+  }
+}
+@media (max-width: 420px) {
+  main section#init div#name-buttons-media div.name-and-buttons div.name h3 {
+    font-size: 16px;
+  }
+  main section#init div#name-buttons-media div.name-and-buttons div.name h1 {
+    font-size: 40px;
+  }
+  main section#init div#name-buttons-media div.name-and-buttons div.name h2 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 360px) {
+  main section#init div#name-buttons-media div.name-and-buttons div.name h3 {
+    font-size: 14px;
+  }
+  main section#init div#name-buttons-media div.name-and-buttons div.name h1 {
+    font-size: 36px;
+  }
+  main section#init div#name-buttons-media div.name-and-buttons div.name h2 {
+    font-size: 18px;
+  }
+  main section#init div#name-buttons-media div.name-and-buttons div.buttons a.link-hire-me div {
+    height: 32px;
+  }
+}
+/* -----------------------------------------------*/
+/* ======================================================================*/
+/* ================================ ABOUT ===============================*/
+section#about {
+  width: 100%;
+  height: 100vh;
+  max-height: 625px;
+  background-image: linear-gradient(to top, #0c0d0f, #141518);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#about section {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#about section h1.subtitle {
+  color: #F3F3F3;
+  font-size: 32px;
+  margin: 24px 0 24px 0; /*top right bottom left*/
+  font-weight: 700;
+}
+section#about section div.line-subtitle {
+  background-color: rgba(133, 134, 135, 0.231372549);
+  width: 48%;
+  height: 2px;
+  border-radius: 1px;
+  margin-bottom: 16px;
+}
+section#about section div.picture-about-me {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+section#about section div.picture-about-me div.img {
+  width: 320px;
+  height: 90%;
+  max-height: 480px;
+  border-radius: 8px;
+  margin-bottom: 0;
+  background-image: url("../../src/image/IMG_20230316_102817 - Editado (2).png");
+  background-size: cover;
+  background-position: top;
+}
+section#about section div.picture-about-me div.about-me {
+  width: 70%;
+  height: 90%;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+}
+section#about section div.picture-about-me div.about-me div.apresentation-and-cv {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+section#about section div.picture-about-me div.about-me div.apresentation-and-cv h1.me {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+}
+section#about section div.picture-about-me div.about-me div.apresentation-and-cv h1.me span {
+  color: #9061FF;
+}
+section#about section div.picture-about-me div.about-me div.apresentation-and-cv h2 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: #C2C3C3;
+}
+section#about section div.picture-about-me div.about-me div.apresentation-and-cv a.download-cv {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 180px;
+  margin-bottom: 32px;
+}
+section#about section div.picture-about-me div.about-me div.apresentation-and-cv a.download-cv div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #9061FF;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+section#about section div.picture-about-me div.about-me div.apresentation-and-cv a.download-cv div svg {
+  width: 24px;
+  height: 24px;
+  padding-left: 16px;
+  margin-right: 8px;
+}
+section#about section div.picture-about-me div.about-me div.apresentation-and-cv a.download-cv div svg path {
+  fill: #F3F3F3;
+}
+section#about section div.picture-about-me div.about-me div.apresentation-and-cv a.download-cv div h1 {
+  color: #F3F3F3;
+  font-size: 16px;
+  padding-right: 16px;
+  font-weight: 400;
+}
+section#about section div.picture-about-me div.about-me div.apresentation-and-cv a.download-cv:hover div {
+  transform: scale(104%);
+  box-shadow: 0px 0px 3px #9061FF;
+}
+section#about section div.picture-about-me div.about-me div.apresentation-and-cv a.download-cv:focus div {
+  border: 1px solid #9061FF;
+  background-color: transparent;
+}
+section#about section div.picture-about-me div.about-me div.languages {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section#about section div.picture-about-me div.about-me div.languages h2 {
+  font-size: 20px;
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+section#about section div.picture-about-me div.about-me div.languages div {
+  display: flex;
+  flex-direction: column;
+}
+section#about section div.picture-about-me div.about-me div.languages div div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+}
+section#about section div.picture-about-me div.about-me div.languages div div img {
+  width: 56px;
+  border-radius: 2px;
+  height: 40px;
+  margin-right: 8px;
+}
+section#about section div.picture-about-me div.about-me div.languages div div div.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section#about section div.picture-about-me div.about-me div.languages div div div.text h4 {
+  font-size: 16px;
+  color: #C2C3C3;
+  font-weight: 400;
+}
+section#about section div.picture-about-me div.about-me div.languages div div div.text h5 {
+  font-size: 12px;
+  color: #858687;
+  font-weight: 400;
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 1150px) {
+  section#about {
+    height: auto;
+    max-height: none;
+  }
+  section#about section div.picture-about-me {
+    justify-content: center;
+    height: auto;
+  }
+  section#about section div.picture-about-me div.img {
+    width: 320px;
+    height: 320px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+  section#about section div.picture-about-me div.about-me {
+    width: 90%;
+    margin-left: 0;
+  }
+  section#about section div.picture-about-me div.about-me div.languages {
+    padding-bottom: 24px;
+  }
+  section#about section div.picture-about-me div.about-me div.languages div {
+    display: flex;
+    flex-direction: row;
+  }
+  section#about section div.picture-about-me div.about-me div.languages div div {
+    margin-bottom: 0px;
+    margin-right: 8px;
+  }
+}
+@media (max-width: 650px) {
+  section#about section div.picture-about-me div.about-me div.apresentation-and-cv h1.me {
+    font-size: 20px;
+  }
+  section#about section div.picture-about-me div.about-me div.apresentation-and-cv h2 {
+    font-size: 14px;
+  }
+  section#about section div.picture-about-me div.about-me div.languages h2 {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  section#about section div.picture-about-me div.about-me div.languages div {
+    margin-top: 0;
+  }
+  section#about section div.picture-about-me div.about-me div.languages div div img {
+    height: 32px;
+    width: 48px;
+  }
+  section#about section div.picture-about-me div.about-me div.languages div div div.text h4 {
+    font-size: 14px;
+  }
+  section#about section div.picture-about-me div.about-me div.languages div div div.text h5 {
+    font-size: 12px;
+  }
+}
+@media (max-width: 535px) {
+  section#about section h1.subtitle {
+    font-size: 28px;
+  }
+  section#about section div.picture-about-me div.about-me div.apresentation-and-cv h1.me {
+    font-size: 18px;
+  }
+  section#about section div.picture-about-me div.about-me div.apresentation-and-cv h2 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 470px) {
+  section#about section h1.subtitle {
+    font-size: 24px;
+  }
+  section#about section div.picture-about-me div.about-me div.apresentation-and-cv h1.me {
+    font-size: 16px;
+  }
+  section#about section div.picture-about-me div.about-me div.apresentation-and-cv h2 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 415px) {
+  section#about section div.picture-about-me div.img {
+    height: 240px;
+    width: 240px;
+  }
+  section#about section div.picture-about-me div.about-me div.apresentation-and-cv h1.me {
+    font-size: 14px;
+  }
+  section#about section div.picture-about-me div.about-me div.apresentation-and-cv h2 {
+    font-size: 12px;
+  }
+  section#about section div.picture-about-me div.about-me div.languages h2 {
+    font-size: 12px;
+    margin-bottom: 0;
+  }
+  section#about section div.picture-about-me div.about-me div.languages div {
+    margin-top: 0;
+  }
+  section#about section div.picture-about-me div.about-me div.languages div div img {
+    height: 32px;
+    width: 48px;
+  }
+  section#about section div.picture-about-me div.about-me div.languages div div div.text h4 {
+    font-size: 12px;
+  }
+  section#about section div.picture-about-me div.about-me div.languages div div div.text h5 {
+    font-size: 10px;
+  }
+}
+@media (max-width: 360px) {
+  section#about section div.picture-about-me div.img {
+    height: 240px;
+    width: 240px;
+  }
+  section#about section div.picture-about-me div.about-me div.apresentation-and-cv a.download-cv div {
+    height: 32px;
+  }
+}
+/* -----------------------------------------------*/
+/* ======================================================================*/
+div.line-purple {
+  width: 4px;
+  height: 80px;
+  border-radius: 2px;
+  background-image: linear-gradient(to top, #141518, #9061FF);
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* ============================== HABILITIES =============================*/
+section#habilities {
+  width: 100%;
+  height: 100vh;
+  max-height: 625px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
+section#habilities section {
+  min-height: 100%;
+  height: auto;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(133, 134, 135, 0.231372549);
+  margin-bottom: 48px;
+}
+section#habilities section h1.subtitle {
+  color: #F3F3F3;
+  font-size: 32px;
+  margin: 24px 0 24px 0; /*top right bottom left*/
+  font-weight: 700;
+}
+section#habilities section div.line-subtitle {
+  background-color: rgba(133, 134, 135, 0.231372549);
+  width: 48%;
+  height: 2px;
+  border-radius: 1px;
+  margin-bottom: 16px;
+}
+section#habilities section div.menu-habilities {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin-top: 16px;
+  border-bottom: 1px solid rgba(133, 134, 135, 0.231372549);
+  padding-bottom: 16px;
+  position: relative;
+}
+section#habilities section div.menu-habilities input {
+  display: none;
+}
+section#habilities section div.menu-habilities label {
+  width: 16%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+section#habilities section div.menu-habilities label h1 {
+  color: #C2C3C3;
+  font-size: 20px;
+  font-weight: 500;
+}
+section#habilities section div.menu-habilities input:checked + label h1 {
+  color: #F3F3F3;
+}
+section#habilities section div.menu-habilities div.line-purple-menu {
+  width: 16%;
+  height: 2px;
+  position: absolute;
+  top: 39px;
+  border-radius: 1px;
+  background-color: #9061FF;
+  transition: all 0.5s;
+}
+section#habilities section div.menu-habilities div.l32 {
+  width: 32%;
+  display: none;
+}
+section#habilities section div.habilities-container {
+  margin-top: 16px;
+  width: 100%;
+  height: 100%;
+}
+section#habilities section div.tecnologies {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+section#habilities section div.tecnologies div.text {
+  width: 560px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section#habilities section div.tecnologies div.text h1 {
+  margin: 0 0 8px 0;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+}
+section#habilities section div.tecnologies div.text h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #C2C3C3;
+}
+section#habilities section div.tecnologies div.tech-learned {
+  width: 560px;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+section#habilities section div.tecnologies div.tech-learned div.techs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  transition: all 0.5s;
+}
+section#habilities section div.tecnologies div.tech-learned div.techs div.bg-tech-learned {
+  width: 104px;
+  height: 104px;
+  border-radius: 8px;
+  margin: 0 0 16px 16px;
+  background-color: #141518;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.5s;
+}
+section#habilities section div.tecnologies div.tech-learned div.techs div.bg-tech-learned img {
+  display: block;
+  margin: 0 auto;
+  height: 80px;
+  width: auto;
+  border-radius: 2px;
+}
+section#habilities section div.tecnologies div.tech-learned p.link-see {
+  color: #F3F3F3;
+  margin-left: 24px;
+  transition: all 0.2s;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-bottom: 48px;
+  margin-top: 16px;
+}
+section#habilities section div.tecnologies div.tech-learned p.link-see:hover {
+  transform: scale(104%);
+}
+section#habilities section div.tecnologies div.tech-learned p.link-see:focus {
+  color: #9061FF;
+}
+section#habilities section div.hidden {
+  display: none;
+}
+section#habilities section div.show {
+  display: flex;
+}
+section#habilities section div.courses-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+section#habilities section div.courses-content div.owl-carousel {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 360px;
+}
+section#habilities section div.courses-content div.owl-carousel div.item {
+  display: flex;
+  width: 240px;
+  height: 280px;
+  margin: 16px;
+  margin-bottom: 48px;
+}
+section#habilities section div.courses-content div.owl-carousel div.item a {
+  display: flex;
+  text-decoration: none;
+  transition: all 0.5s;
+  width: 240px;
+  height: 280px;
+}
+section#habilities section div.courses-content div.owl-carousel div.item a div.layout-courses {
+  width: 240px;
+  height: 280px;
+  border-radius: 8px;
+  background-color: #141518;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px;
+}
+section#habilities section div.courses-content div.owl-carousel div.item a div.layout-courses div.img-text {
+  width: 93%;
+}
+section#habilities section div.courses-content div.owl-carousel div.item a div.layout-courses div.img-text img {
+  width: 100%;
+  height: 128px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+}
+section#habilities section div.courses-content div.owl-carousel div.item a div.layout-courses div.img-text h1 {
+  color: #F3F3F3;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  width: 100%;
+}
+section#habilities section div.courses-content div.owl-carousel div.item a div.layout-courses div.img-text p {
+  color: #C2C3C3;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 4px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+section#habilities section div.courses-content div.owl-carousel div.item a div.layout-courses div.tech {
+  width: 96%;
+  height: 32px;
+  border-top: 1px solid rgba(133, 134, 135, 0.231372549);
+  margin-top: 16px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section#habilities section div.courses-content div.owl-carousel div.item a div.layout-courses div.tech img {
+  height: 24px;
+  width: auto;
+  margin: 4px;
+  border-radius: 2px;
+}
+section#habilities section div.courses-content div.owl-carousel div.item a:hover div.layout-courses {
+  transform: scale(104%);
+}
+section#habilities section div.courses-content a {
+  color: #F3F3F3;
+  margin-left: 24px;
+  transition: all 0.2s;
+  margin-bottom: 48px;
+  margin-top: 24px;
+}
+section#habilities section div.courses-content a:hover {
+  transform: scale(104%);
+}
+section#habilities section div.courses-content a:focus {
+  color: #9061FF;
+}
+section#habilities section div.certificates-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#habilities section div.certificates-content div.certificates-conquered {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+section#habilities section div.certificates-content div.certificates-conquered a {
+  display: flex;
+  text-decoration: none;
+  width: 580px;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+section#habilities section div.certificates-content div.certificates-conquered a div.layout-certificate {
+  width: 100%;
+  height: 72px;
+  border-radius: 4px;
+  background-color: #141518;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section#habilities section div.certificates-content div.certificates-conquered a div.layout-certificate img {
+  height: 56px;
+  width: 56px;
+  margin-left: 8px;
+  margin-right: 16px;
+  border-radius: 2px;
+}
+section#habilities section div.certificates-content div.certificates-conquered a div.layout-certificate div.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section#habilities section div.certificates-content div.certificates-conquered a div.layout-certificate div.text h1 {
+  color: #F3F3F3;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  width: 100%;
+}
+section#habilities section div.certificates-content div.certificates-conquered a div.layout-certificate div.text p {
+  color: #C2C3C3;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 4px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+section#habilities section div.certificates-content div.certificates-conquered a:hover div.layout-certificate {
+  transform: scale(100%);
+}
+section#habilities section div.certificates-content a {
+  color: #F3F3F3;
+  margin-left: 24px;
+  transition: all 0.2s;
+  margin-bottom: 48px;
+  margin-top: 24px;
+}
+section#habilities section div.certificates-content a:hover {
+  transform: scale(104%);
+}
+section#habilities section div.certificates-content a:focus {
+  color: #9061FF;
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 1200px) {
+  section#habilities {
+    height: auto;
+    max-height: none;
+  }
+  section#habilities section div.habilities-container {
+    width: 90%;
+  }
+  section#habilities section div.tecnologies div.text {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  section#habilities section div.tecnologies div.tech-learned {
+    width: 100%;
+  }
+  section#habilities section div.tecnologies div.tech-learned div.techs div.bg-tech-learned {
+    margin: 4px;
+  }
+  section#habilities section div.courses-content {
+    height: auto;
+  }
+  section#habilities section div.menu-habilities label h1 {
+    font-size: 18px;
+  }
+  section#habilities section div.menu-habilities div.line-purple-menu {
+    top: 37px;
+  }
+  section#habilities section div.certificates-content div.certificates-conquered a {
+    width: 480px;
+  }
+}
+@media (max-width: 1125px) {
+  section#habilities section div.certificates-content div.certificates-conquered a {
+    width: 440px;
+  }
+}
+@media (max-width: 1000px) {
+  section#habilities section div.menu-habilities label h1 {
+    font-size: 16px;
+  }
+  section#habilities section div.menu-habilities div.line-purple-menu {
+    top: 35px;
+  }
+  section#habilities section div.certificates-content div.certificates-conquered a {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  section#habilities section div.menu-habilities label h1 {
+    font-size: 14px;
+  }
+  section#habilities section div.menu-habilities div.line-purple-menu {
+    top: 33px;
+  }
+}
+@media (max-width: 750px) {
+  section#habilities section div.menu-habilities label {
+    width: 32%;
+  }
+  section#habilities section div.menu-habilities div.l16 {
+    display: none;
+  }
+  section#habilities section div.menu-habilities div.l32 {
+    display: flex;
+  }
+}
+@media (max-width: 535px) {
+  section#habilities section h1.subtitle {
+    font-size: 28px;
+  }
+  section#habilities section div.tecnologies div.tech-learned div.techs div.bg-tech-learned {
+    margin: 4px;
+    width: 80px;
+    height: 80px;
+  }
+  section#habilities section div.tecnologies div.tech-learned div.techs div.bg-tech-learned img {
+    height: 64px;
+  }
+  section#habilities section div.certificates-content div.certificates-conquered a div.layout-certificate div.text h1 {
+    font-size: 14px;
+  }
+  section#habilities section div.certificates-content div.certificates-conquered a div.layout-certificate div.text p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 470px) {
+  section#habilities section h1.subtitle {
+    font-size: 24px;
+  }
+  section#habilities section div.menu-habilities label h1 {
+    font-size: 12px;
+  }
+  section#habilities section div.menu-habilities div.line-purple-menu {
+    top: 31px;
+  }
+  section#habilities section div.certificates-content div.certificates-conquered a div.layout-certificate div.text h1 {
+    font-size: 12px;
+  }
+  section#habilities section div.certificates-content div.certificates-conquered a div.layout-certificate div.text p {
+    font-size: 10px;
+  }
+}
+/* -----------------------------------------------*/
+/* ======================================================================*/
+/* ============================== PROJECTS =============================*/
+section#projects {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#projects section {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid rgba(133, 134, 135, 0.231372549);
+  margin-bottom: 48px;
+}
+section#projects section h1.subtitle {
+  color: #F3F3F3;
+  font-size: 32px;
+  margin: 24px 0 24px 0; /*top right bottom left*/
+  font-weight: 700;
+}
+section#projects section div.line-subtitle {
+  background-color: rgba(133, 134, 135, 0.231372549);
+  width: 48%;
+  height: 2px;
+  border-radius: 1px;
+  margin-bottom: 16px;
+}
+section#projects section div.projects-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+section#projects section div.projects-content div.projects-done {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  width: 100%;
+}
+section#projects section div.projects-content div.projects-done div.oc-2 {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 360px;
+}
+section#projects section div.projects-content div.projects-done div.oc-2 div.item {
+  display: flex;
+  width: 240px;
+  height: 280px;
+  margin: 4px;
+}
+section#projects section div.projects-content div.projects-done div.oc-2 div.item a {
+  display: flex;
+  text-decoration: none;
+  transition: all 0.5s;
+  width: 240px;
+  height: 280px;
+}
+section#projects section div.projects-content div.projects-done div.oc-2 div.item a div.layout-project {
+  width: 240px;
+  height: 280px;
+  border-radius: 8px;
+  background-color: #141518;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px;
+  margin-bottom: 48px;
+}
+section#projects section div.projects-content div.projects-done div.oc-2 div.item a div.layout-project div.img-text {
+  width: 93%;
+}
+section#projects section div.projects-content div.projects-done div.oc-2 div.item a div.layout-project div.img-text img {
+  width: 100%;
+  height: 128px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+}
+section#projects section div.projects-content div.projects-done div.oc-2 div.item a div.layout-project div.img-text h1 {
+  color: #F3F3F3;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  width: 100%;
+}
+section#projects section div.projects-content div.projects-done div.oc-2 div.item a div.layout-project div.img-text p {
+  color: #C2C3C3;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 4px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+section#projects section div.projects-content div.projects-done div.oc-2 div.item a div.layout-project div.tech {
+  width: 96%;
+  height: 32px;
+  border-top: 1px solid rgba(133, 134, 135, 0.231372549);
+  margin-top: 16px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section#projects section div.projects-content div.projects-done div.oc-2 div.item a div.layout-project div.tech img {
+  height: 24px;
+  width: auto;
+  margin: 4px;
+  border-radius: 2px;
+}
+section#projects section div.projects-content div.projects-done div.oc-2 div.item a:hover div.layout-project {
+  transform: scale(104%);
+}
+section#projects section div.projects-content div.projects-done div.oc-2 div.owl-stage-outer div.owl-stage {
+  margin-bottom: 16px;
+}
+section#projects section div.projects-content a {
+  color: #F3F3F3;
+  margin-left: 24px;
+  transition: all 0.2s;
+  margin-bottom: 48px;
+}
+section#projects section div.projects-content a:hover {
+  transform: scale(104%);
+}
+section#projects section div.projects-content a:focus {
+  color: #9061FF;
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 1200px) {
+  section#projects {
+    height: auto;
+    max-height: none;
+  }
+  section#projects section div.projects-content div.projects-done {
+    margin-bottom: 48px;
+  }
+  section#projects section div.projects-content div.projects-done a {
+    margin-bottom: 16px;
+  }
+  section#projects section div.projects-content div.projects-done a div.layout-project {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 535px) {
+  section#projects section h1.subtitle {
+    font-size: 28px;
+  }
+}
+@media (max-width: 528px) {
+  section#projects section div.projects-content div.projects-done {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 470px) {
+  section#projects section h1.subtitle {
+    font-size: 24px;
+  }
+}
+/* -----------------------------------------------*/
+/* ======================================================================*/
+/* ============================== PROJECTS =============================*/
+section#contact {
+  width: 100%;
+  height: 100vh;
+  max-height: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to top, #141518, #0c0d0f);
+}
+section#contact section {
+  height: 100%;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 48px;
+}
+section#contact section h1.subtitle {
+  color: #F3F3F3;
+  font-size: 32px;
+  margin: 24px 0 24px 0; /*top right bottom left*/
+  font-weight: 700;
+}
+section#contact section div.line-subtitle {
+  background-color: rgba(133, 134, 135, 0.231372549);
+  width: 48%;
+  height: 2px;
+  border-radius: 1px;
+  margin-bottom: 16px;
+}
+section#contact section div.info-and-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  height: 100%;
+  width: 100%;
+}
+section#contact section div.info-and-form div.info {
+  height: 100%;
+  width: 580px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 469px;
+}
+section#contact section div.info-and-form div.info div.wpp-and-in {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 128px;
+  width: 100%;
+}
+section#contact section div.info-and-form div.info div.wpp-and-in div.wpp, section#contact section div.info-and-form div.info div.wpp-and-in div.in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 48%;
+  border-radius: 8px;
+  background-color: #141518;
+}
+section#contact section div.info-and-form div.info div.wpp-and-in div.wpp svg, section#contact section div.info-and-form div.info div.wpp-and-in div.in svg {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #0c0d0f;
+  margin-top: 24px;
+}
+section#contact section div.info-and-form div.info div.wpp-and-in div.wpp svg path, section#contact section div.info-and-form div.info div.wpp-and-in div.in svg path {
+  fill: #9061FF;
+}
+section#contact section div.info-and-form div.info div.wpp-and-in div.wpp h1, section#contact section div.info-and-form div.info div.wpp-and-in div.in h1 {
+  color: #F3F3F3;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 16px;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 8px;
+}
+section#contact section div.info-and-form div.info div.email {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #141518;
+}
+section#contact section div.info-and-form div.info div.email svg {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #0c0d0f;
+  margin-left: 12px;
+  margin-right: 16px;
+}
+section#contact section div.info-and-form div.info div.email svg path {
+  fill: #9061FF;
+}
+section#contact section div.info-and-form div.info div.email h1 {
+  color: #F3F3F3;
+  font-size: 16px;
+  font-weight: 400;
+}
+section#contact section div.info-and-form div.info div.location {
+  height: 240px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 2px #1B1C1E;
+}
+section#contact section div.info-and-form div.info div.location iframe {
+  width: 100%;
+  height: 176px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin: none;
+  margin-bottom: -4px;
+}
+section#contact section div.info-and-form div.info div.location div.city-and-cep {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  height: 64px;
+  width: 100%;
+  background-color: #141518;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: none;
+}
+section#contact section div.info-and-form div.info div.location div.city-and-cep svg {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  margin-left: 12px;
+  margin-right: 16px;
+}
+section#contact section div.info-and-form div.info div.location div.city-and-cep svg path {
+  fill: #9061FF;
+}
+section#contact section div.info-and-form div.info div.location div.city-and-cep h1 {
+  color: #F3F3F3;
+  font-size: 18px;
+  font-weight: 500;
+}
+section#contact section div.info-and-form form {
+  height: 100%;
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section#contact section div.info-and-form form label {
+  width: 90%;
+}
+section#contact section div.info-and-form form label h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+section#contact section div.info-and-form form input {
+  outline: none;
+  border: none;
+  width: 90%;
+  padding-left: 8px;
+  height: 48px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  background-color: #141518;
+  color: #F3F3F3;
+  font-size: 16px;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+}
+section#contact section div.info-and-form form input:focus {
+  border: 1px solid #9061FF;
+}
+section#contact section div.info-and-form form input:active {
+  border: 1px solid #9061FF;
+}
+section#contact section div.info-and-form form textarea {
+  outline: none;
+  border: none;
+  width: 90%;
+  min-width: 90%;
+  max-width: 90%;
+  padding-left: 8px;
+  padding-top: 8px;
+  height: 96px;
+  max-height: 96px;
+  min-height: 96px;
+  margin-bottom: 24px;
+  border-radius: 8px;
+  background-color: #141518;
+  color: #F3F3F3;
+  font-size: 16px;
+  border: 1px solid transparent;
+  transition: all 0.5s;
+  font-family: "Montserrat", sans-serif;
+}
+section#contact section div.info-and-form form textarea:focus {
+  border: 1px solid #9061FF;
+}
+section#contact section div.info-and-form form textarea:active {
+  border: 1px solid #9061FF;
+}
+section#contact section div.info-and-form form button {
+  width: 90%;
+  height: 40px;
+  border-radius: 8px;
+  outline: none;
+  background-color: #9061FF;
+  border: 1px solid transparent;
+  color: #F3F3F3;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+section#contact section div.info-and-form form button:hover {
+  background-color: #4c00ff;
+}
+section#contact section div.info-and-form form button:focus {
+  border: 1px solid #4c00ff;
+  background-color: transparent;
+}
+section#contact section div.info-and-form form button:active {
+  border: 1px solid #4c00ff;
+  background-color: transparent;
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 1200px) {
+  section#contact {
+    height: auto;
+    max-height: none;
+  }
+}
+@media (max-width: 1164px) {
+  section#contact section div.info-and-form {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  section#contact section div.info-and-form div.info {
+    width: 90%;
+    margin-top: 32px;
+  }
+  section#contact section div.info-and-form form {
+    width: 100%;
+  }
+}
+@media (max-width: 535px) {
+  section#contact section h1.subtitle {
+    font-size: 28px;
+  }
+  section#contact section div.info-and-form div.info div.wpp-and-in div.wpp h1, section#contact section div.info-and-form div.info div.wpp-and-in div.in h1, section#contact section div.info-and-form div.info div.email h1 {
+    font-size: 14px;
+  }
+  section#contact section div.info-and-form div.info div.wpp-and-in div.wpp svg, section#contact section div.info-and-form div.info div.wpp-and-in div.in svg, section#contact section div.info-and-form div.info div.email svg {
+    width: 24px;
+    height: 24px;
+  }
+  section#contact section div.info-and-form div.info div.location div.city-and-cep h1 {
+    font-size: 16px;
+  }
+}
+@media (max-width: 470px) {
+  section#contact section h1.subtitle {
+    font-size: 24px;
+  }
+}
+@media (max-width: 375px) {
+  section#contact section h1.subtitle {
+    font-size: 28px;
+  }
+  section#contact section div.info-and-form div.info div.wpp-and-in div.wpp h1, section#contact section div.info-and-form div.info div.wpp-and-in div.in h1, section#contact section div.info-and-form div.info div.email h1 {
+    font-size: 12px;
+  }
+  section#contact section div.info-and-form div.info div.wpp-and-in div.wpp svg, section#contact section div.info-and-form div.info div.wpp-and-in div.in svg, section#contact section div.info-and-form div.info div.email svg {
+    width: 20px;
+    height: 20px;
+  }
+  section#contact section div.info-and-form div.info div.location div.city-and-cep h1 {
+    font-size: 14px;
+  }
+  section#contact section div.info-and-form div.info div.location div.city-and-cep svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 330px) {
+  section#contact section h1.subtitle {
+    font-size: 28px;
+  }
+  section#contact section div.info-and-form div.info div.email h1 {
+    font-size: 11px;
+  }
+}
+/* -----------------------------------------------*/
+/* ======================================================================*/
+/* ============================== FOOTER =============================*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #0c0d0f;
+}
+footer div.row-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-around;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+footer div.row-1 div.slogan-and-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer div.row-1 div.slogan-and-copyright div.slogan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer div.row-1 div.slogan-and-copyright div.slogan img {
+  height: 72px;
+  width: 72px;
+  margin-right: 8px;
+}
+footer div.row-1 div.slogan-and-copyright div.slogan h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+footer div.row-1 div.slogan-and-copyright div.slogan h1 span {
+  color: #9061FF;
+}
+footer div.row-1 div.slogan-and-copyright div.copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+footer div.row-1 div.slogan-and-copyright div.copyright h2 {
+  font-size: 12px;
+  color: #C2C3C3;
+  font-weight: 400;
+}
+footer div.row-1 div.site-map {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer div.row-1 div.site-map h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+footer div.row-1 div.site-map div.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 8px;
+}
+footer div.row-1 div.site-map div.links a {
+  text-decoration: none;
+  color: #858687;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+footer div.row-1 div.site-map div.links a:hover {
+  color: #9061FF;
+}
+footer div.row-1 div.contact-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+footer div.row-1 div.contact-btn h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+footer div.row-1 div.contact-btn a#contact-button {
+  text-decoration: none;
+  margin-top: 8px;
+}
+footer div.row-1 div.contact-btn a#contact-button div.layout-button-contact-nav-bar {
+  height: 40px;
+  border: 1px solid #C2C3C3;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 8px;
+}
+footer div.row-1 div.contact-btn a#contact-button div.layout-button-contact-nav-bar svg {
+  width: 20px;
+  height: 20px;
+  padding-left: 16px;
+  margin-right: 8px;
+}
+footer div.row-1 div.contact-btn a#contact-button div.layout-button-contact-nav-bar svg path {
+  fill: #C2C3C3;
+}
+footer div.row-1 div.contact-btn a#contact-button div.layout-button-contact-nav-bar h1 {
+  color: #C2C3C3;
+  font-size: 16px;
+  padding-right: 16px;
+  font-weight: 400;
+}
+footer div.row-1 div.contact-btn a#contact-button:hover div {
+  border: 1px solid #9061FF;
+  box-shadow: 0px 0px 3px #9061FF;
+}
+footer div.row-1 div.contact-btn a#contact-button:active div {
+  border: 1px solid #9061FF;
+  background-color: #9061FF;
+}
+footer div.row-1 div.contact-btn a#contact-button:active div svg path {
+  fill: #F3F3F3;
+}
+footer div.row-1 div.contact-btn a#contact-button:active div h1 {
+  color: #F3F3F3;
+}
+footer div.row-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid rgba(133, 134, 135, 0.231372549);
+}
+footer div.row-2 div.media-and-btn-to-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+footer div.row-2 div.media-and-btn-to-top div.links-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer div.row-2 div.media-and-btn-to-top div.links-media a#link-social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+}
+footer div.row-2 div.media-and-btn-to-top div.links-media a#link-social-media div {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #141518;
+  margin: 0 0 0 12px;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer div.row-2 div.media-and-btn-to-top div.links-media a#link-social-media div svg {
+  display: block;
+  margin: 0 auto;
+  height: 24px;
+  width: 24px;
+  fill: #F3F3F3;
+}
+footer div.row-2 div.media-and-btn-to-top div.links-media a#link-social-media div svg path {
+  fill: #F3F3F3;
+}
+footer div.row-2 div.media-and-btn-to-top div.links-media a#link-social-media:hover div svg {
+  fill: #9061FF;
+}
+footer div.row-2 div.media-and-btn-to-top div.links-media a#link-social-media:hover div svg path {
+  fill: #9061FF;
+}
+footer div.row-2 div.media-and-btn-to-top div.links-media a#link-social-media:active div {
+  background-color: #9061FF;
+}
+footer div.row-2 div.media-and-btn-to-top div.links-media a#link-social-media:active div svg {
+  fill: #F3F3F3;
+}
+footer div.row-2 div.media-and-btn-to-top div.links-media a#link-social-media:active div svg path {
+  fill: #F3F3F3;
+}
+footer div.row-2 div.media-and-btn-to-top a#top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 16px;
+}
+footer div.row-2 div.media-and-btn-to-top a#top div {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: #9061FF;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer div.row-2 div.media-and-btn-to-top a#top div svg {
+  display: block;
+  margin: 0 auto;
+  height: 24px;
+  width: 24px;
+  fill: #F3F3F3;
+  transition: all 0.5s;
+}
+footer div.row-2 div.media-and-btn-to-top a#top div svg path {
+  fill: #F3F3F3;
+}
+footer div.row-2 div.media-and-btn-to-top a#top:hover div {
+  background-color: #4c00ff;
+}
+footer div.row-2 div.media-and-btn-to-top a#top:hover div svg {
+  margin-top: -4px;
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 750px) {
+  footer div.row-1 div.slogan-and-copyright div.slogan img {
+    width: 56px;
+    height: 56px;
+  }
+  footer div.row-1 div.slogan-and-copyright div.slogan h1 {
+    font-size: 14px;
+  }
+  footer div.row-1 div.slogan-and-copyright div.copyright h2 {
+    font-size: 10px;
+  }
+  footer div.row-1 div.site-map h2 {
+    font-size: 14px;
+  }
+  footer div.row-1 div.site-map div.links a {
+    font-size: 14px;
+  }
+  footer div.row-1 div.contact-btn h2 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 650px) {
+  footer div.row-1 div.contact-btn {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  footer div.row-1 div.site-map {
+    display: none;
+  }
+}
+/* -----------------------------------------------*/
+/* ======================================================================*/
+/* ######################### PROJECTS AND COURSES'S PAGE ######################### */
+section.page-courses, section.page-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to top, #141518, #0c0d0f);
+}
+section.page-courses div.content, section.page-projects div.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+section.page-courses div.content div.header, section.page-projects div.content div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid rgba(133, 134, 135, 0.231372549);
+}
+section.page-courses div.content div.header h1, section.page-projects div.content div.header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+}
+section.page-courses div.content div.header div.filter, section.page-projects div.content div.header div.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  justify-content: space-around;
+}
+section.page-courses div.content div.header div.filter div.select, section.page-projects div.content div.header div.filter div.select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section.page-courses div.content div.header div.filter div.select h3, section.page-projects div.content div.header div.filter div.select h3 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #F3F3F3;
+}
+section.page-courses div.content div.header div.filter div.select select, section.page-projects div.content div.header div.filter div.select select {
+  width: 128px;
+  height: 24px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #C2C3C3;
+  color: #C2C3C3;
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 8px;
+  transition: all 0.2s;
+}
+section.page-courses div.content div.header div.filter div.select select option, section.page-projects div.content div.header div.filter div.select select option {
+  background-color: #0c0d0f;
+  color: #F3F3F3;
+}
+section.page-courses div.content div.header div.filter div.select select option img, section.page-projects div.content div.header div.filter div.select select option img {
+  width: 20px;
+  height: 20px;
+}
+section.page-courses div.content div.header div.filter div.select select:focus, section.page-projects div.content div.header div.filter div.select select:focus {
+  border-color: #9061FF;
+}
+section.page-courses div.content div.header div.filter div.select select:active, section.page-projects div.content div.header div.filter div.select select:active {
+  border-color: #9061FF;
+}
+section.page-courses div.content div.header div.filter div.order, section.page-projects div.content div.header div.filter div.order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 12%;
+}
+section.page-courses div.content div.header div.filter div.order label, section.page-projects div.content div.header div.filter div.order label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+section.page-courses div.content div.header div.filter div.order label svg, section.page-projects div.content div.header div.filter div.order label svg {
+  width: 24px;
+  height: 24px;
+}
+section.page-courses div.content div.header div.filter div.order label svg path, section.page-projects div.content div.header div.filter div.order label svg path {
+  stroke: #858687;
+}
+section.page-courses div.content div.header div.filter div.order label:hover svg path, section.page-projects div.content div.header div.filter div.order label:hover svg path {
+  stroke: #C2C3C3;
+}
+section.page-courses div.content div.header div.filter div.order input, section.page-projects div.content div.header div.filter div.order input {
+  display: none;
+}
+section.page-courses div.content div.header div.filter div.order input:checked + label svg path, section.page-projects div.content div.header div.filter div.order input:checked + label svg path {
+  stroke: #F3F3F3;
+}
+section.page-courses div.content div.courses, section.page-courses div.content div.projects, section.page-projects div.content div.courses, section.page-projects div.content div.projects {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  margin-top: 16px;
+}
+section.page-courses div.content div.courses a, section.page-courses div.content div.projects a, section.page-projects div.content div.courses a, section.page-projects div.content div.projects a {
+  display: flex;
+  text-decoration: none;
+  transition: all 0.5s;
+  width: 240px;
+  height: 280px;
+  margin-bottom: 16px;
+}
+section.page-courses div.content div.courses a div.layout-courses, section.page-courses div.content div.courses a div.layout-projects, section.page-courses div.content div.projects a div.layout-courses, section.page-courses div.content div.projects a div.layout-projects, section.page-projects div.content div.courses a div.layout-courses, section.page-projects div.content div.courses a div.layout-projects, section.page-projects div.content div.projects a div.layout-courses, section.page-projects div.content div.projects a div.layout-projects {
+  width: 240px;
+  height: 280px;
+  border-radius: 8px;
+  background-color: #141518;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #1B1C1E;
+}
+section.page-courses div.content div.courses a div.layout-courses div.img-text, section.page-courses div.content div.courses a div.layout-projects div.img-text, section.page-courses div.content div.projects a div.layout-courses div.img-text, section.page-courses div.content div.projects a div.layout-projects div.img-text, section.page-projects div.content div.courses a div.layout-courses div.img-text, section.page-projects div.content div.courses a div.layout-projects div.img-text, section.page-projects div.content div.projects a div.layout-courses div.img-text, section.page-projects div.content div.projects a div.layout-projects div.img-text {
+  width: 93%;
+}
+section.page-courses div.content div.courses a div.layout-courses div.img-text img, section.page-courses div.content div.courses a div.layout-projects div.img-text img, section.page-courses div.content div.projects a div.layout-courses div.img-text img, section.page-courses div.content div.projects a div.layout-projects div.img-text img, section.page-projects div.content div.courses a div.layout-courses div.img-text img, section.page-projects div.content div.courses a div.layout-projects div.img-text img, section.page-projects div.content div.projects a div.layout-courses div.img-text img, section.page-projects div.content div.projects a div.layout-projects div.img-text img {
+  width: 100%;
+  height: 128px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+}
+section.page-courses div.content div.courses a div.layout-courses div.img-text h1, section.page-courses div.content div.courses a div.layout-projects div.img-text h1, section.page-courses div.content div.projects a div.layout-courses div.img-text h1, section.page-courses div.content div.projects a div.layout-projects div.img-text h1, section.page-projects div.content div.courses a div.layout-courses div.img-text h1, section.page-projects div.content div.courses a div.layout-projects div.img-text h1, section.page-projects div.content div.projects a div.layout-courses div.img-text h1, section.page-projects div.content div.projects a div.layout-projects div.img-text h1 {
+  color: #F3F3F3;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  width: 100%;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+section.page-courses div.content div.courses a div.layout-courses div.img-text p, section.page-courses div.content div.courses a div.layout-projects div.img-text p, section.page-courses div.content div.projects a div.layout-courses div.img-text p, section.page-courses div.content div.projects a div.layout-projects div.img-text p, section.page-projects div.content div.courses a div.layout-courses div.img-text p, section.page-projects div.content div.courses a div.layout-projects div.img-text p, section.page-projects div.content div.projects a div.layout-courses div.img-text p, section.page-projects div.content div.projects a div.layout-projects div.img-text p {
+  color: #C2C3C3;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 4px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+section.page-courses div.content div.courses a div.layout-courses div.img-text h5, section.page-courses div.content div.courses a div.layout-projects div.img-text h5, section.page-courses div.content div.projects a div.layout-courses div.img-text h5, section.page-courses div.content div.projects a div.layout-projects div.img-text h5, section.page-projects div.content div.courses a div.layout-courses div.img-text h5, section.page-projects div.content div.courses a div.layout-projects div.img-text h5, section.page-projects div.content div.projects a div.layout-courses div.img-text h5, section.page-projects div.content div.projects a div.layout-projects div.img-text h5 {
+  font-size: 10px;
+  font-weight: 400;
+  color: #858687;
+  margin-top: 12px;
+  width: 100%;
+  text-align: right;
+}
+section.page-courses div.content div.courses a div.layout-courses div.tech, section.page-courses div.content div.courses a div.layout-projects div.tech, section.page-courses div.content div.projects a div.layout-courses div.tech, section.page-courses div.content div.projects a div.layout-projects div.tech, section.page-projects div.content div.courses a div.layout-courses div.tech, section.page-projects div.content div.courses a div.layout-projects div.tech, section.page-projects div.content div.projects a div.layout-courses div.tech, section.page-projects div.content div.projects a div.layout-projects div.tech {
+  width: 96%;
+  height: 32px;
+  border-top: 1px solid rgba(133, 134, 135, 0.231372549);
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section.page-courses div.content div.courses a div.layout-courses div.tech img, section.page-courses div.content div.courses a div.layout-projects div.tech img, section.page-courses div.content div.projects a div.layout-courses div.tech img, section.page-courses div.content div.projects a div.layout-projects div.tech img, section.page-projects div.content div.courses a div.layout-courses div.tech img, section.page-projects div.content div.courses a div.layout-projects div.tech img, section.page-projects div.content div.projects a div.layout-courses div.tech img, section.page-projects div.content div.projects a div.layout-projects div.tech img {
+  height: 24px;
+  width: auto;
+  margin: 4px;
+  border-radius: 2px;
+}
+section.page-courses div.content div.courses a:hover div.layout-courses, section.page-courses div.content div.courses a:hover div.layout-projects, section.page-courses div.content div.projects a:hover div.layout-courses, section.page-courses div.content div.projects a:hover div.layout-projects, section.page-projects div.content div.courses a:hover div.layout-courses, section.page-projects div.content div.courses a:hover div.layout-projects, section.page-projects div.content div.projects a:hover div.layout-courses, section.page-projects div.content div.projects a:hover div.layout-projects {
+  transform: scale(104%);
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 750px) {
+  section.page-courses div.content div.header, section.page-projects div.content div.header {
+    display: flex;
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  section.page-courses div.content div.header div.filter, section.page-projects div.content div.header div.filter {
+    margin-top: 16px;
+  }
+}
+/* -----------------------------------------------*/
+/* ################################################################## */
+/* ######################### COURSES'S PAGE ######################### */
+section.page-certificates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to top, #141518, #0c0d0f);
+}
+section.page-certificates div.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+section.page-certificates div.content div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid rgba(133, 134, 135, 0.231372549);
+}
+section.page-certificates div.content div.header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+}
+section.page-certificates div.content div.header div.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  justify-content: space-around;
+}
+section.page-certificates div.content div.header div.filter div.select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section.page-certificates div.content div.header div.filter div.select h3 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #F3F3F3;
+}
+section.page-certificates div.content div.header div.filter div.select select {
+  width: 128px;
+  height: 24px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #C2C3C3;
+  color: #C2C3C3;
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 8px;
+  transition: all 0.2s;
+}
+section.page-certificates div.content div.header div.filter div.select select option {
+  background-color: #0c0d0f;
+  color: #F3F3F3;
+}
+section.page-certificates div.content div.header div.filter div.select select option img {
+  width: 20px;
+  height: 20px;
+}
+section.page-certificates div.content div.header div.filter div.select select:focus {
+  border-color: #9061FF;
+}
+section.page-certificates div.content div.header div.filter div.select select:active {
+  border-color: #9061FF;
+}
+section.page-certificates div.content div.header div.filter div.order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 12%;
+}
+section.page-certificates div.content div.header div.filter div.order label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+section.page-certificates div.content div.header div.filter div.order label svg {
+  width: 24px;
+  height: 24px;
+}
+section.page-certificates div.content div.header div.filter div.order label svg path {
+  stroke: #858687;
+}
+section.page-certificates div.content div.header div.filter div.order label:hover svg path {
+  stroke: #C2C3C3;
+}
+section.page-certificates div.content div.header div.filter div.order input {
+  display: none;
+}
+section.page-certificates div.content div.header div.filter div.order input:checked + label svg path {
+  stroke: #F3F3F3;
+}
+section.page-certificates div.content div.certificates-conquered {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+}
+section.page-certificates div.content div.certificates-conquered a {
+  display: flex;
+  text-decoration: none;
+  width: 580px;
+  margin-bottom: 0px;
+  margin-top: 24px;
+}
+section.page-certificates div.content div.certificates-conquered a div.layout-certificate {
+  width: 100%;
+  height: 72px;
+  border-radius: 4px;
+  background-color: #141518;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #1B1C1E;
+}
+section.page-certificates div.content div.certificates-conquered a div.layout-certificate img {
+  height: 56px;
+  width: 56px;
+  margin-left: 8px;
+  margin-right: 16px;
+  border-radius: 2px;
+}
+section.page-certificates div.content div.certificates-conquered a div.layout-certificate div.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section.page-certificates div.content div.certificates-conquered a div.layout-certificate div.text h1 {
+  color: #F3F3F3;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  width: 100%;
+}
+section.page-certificates div.content div.certificates-conquered a div.layout-certificate div.text p {
+  color: #C2C3C3;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 4px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+section.page-certificates div.content div.certificates-conquered a div.layout-certificate div.text h5 {
+  font-size: 10px;
+  font-weight: 400;
+  color: #858687;
+  width: 98%;
+  text-align: right;
+}
+section.page-certificates div.content div.certificates-conquered a:hover div.layout-certificate {
+  transform: scale(102%);
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 1175px) {
+  section.page-certificates div.content div.certificates-conquered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  section.page-certificates div.content div.certificates-conquered a {
+    width: 90%;
+  }
+}
+@media (max-width: 750px) {
+  section.page-certificates div.content div.header {
+    display: flex;
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  section.page-certificates div.content div.header div.filter {
+    margin-top: 16px;
+  }
+}
+@media (max-width: 535px) {
+  section.page-certificates div.content div.certificates-conquered a div.layout-certificate div.text h1 {
+    font-size: 14px;
+  }
+  section.page-certificates div.content div.certificates-conquered a div.layout-certificate div.text p {
+    font-size: 10px;
+  }
+}
+@media (max-width: 470px) {
+  section.page-certificates div.content div.certificates-conquered a div.layout-certificate div.text h1 {
+    font-size: 12px;
+  }
+  section.page-certificates div.content div.certificates-conquered a div.layout-certificate div.text p {
+    font-size: 10px;
+  }
+}
+/* -----------------------------------------------*/
+/* ################################################################## */
+/* ######################### PROJECTS AND COURSES'S PAGE ######################### */
+section.page-courses, section.page-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to top, #141518, #0c0d0f);
+}
+section.page-courses div.content, section.page-projects div.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+section.page-courses div.content div.header, section.page-projects div.content div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid rgba(133, 134, 135, 0.231372549);
+}
+section.page-courses div.content div.header h1, section.page-projects div.content div.header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+}
+section.page-courses div.content div.header div.filter, section.page-projects div.content div.header div.filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  justify-content: space-around;
+}
+section.page-courses div.content div.header div.filter div.select, section.page-projects div.content div.header div.filter div.select {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section.page-courses div.content div.header div.filter div.select h3, section.page-projects div.content div.header div.filter div.select h3 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #F3F3F3;
+}
+section.page-courses div.content div.header div.filter div.select select, section.page-projects div.content div.header div.filter div.select select {
+  width: 128px;
+  height: 24px;
+  border-radius: 4px;
+  outline: none;
+  border: 1px solid #C2C3C3;
+  color: #C2C3C3;
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  padding-left: 8px;
+  transition: all 0.2s;
+}
+section.page-courses div.content div.header div.filter div.select select option, section.page-projects div.content div.header div.filter div.select select option {
+  background-color: #0c0d0f;
+  color: #F3F3F3;
+}
+section.page-courses div.content div.header div.filter div.select select option img, section.page-projects div.content div.header div.filter div.select select option img {
+  width: 20px;
+  height: 20px;
+}
+section.page-courses div.content div.header div.filter div.select select:focus, section.page-projects div.content div.header div.filter div.select select:focus {
+  border-color: #9061FF;
+}
+section.page-courses div.content div.header div.filter div.select select:active, section.page-projects div.content div.header div.filter div.select select:active {
+  border-color: #9061FF;
+}
+section.page-courses div.content div.header div.filter div.order, section.page-projects div.content div.header div.filter div.order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 12%;
+}
+section.page-courses div.content div.header div.filter div.order label, section.page-projects div.content div.header div.filter div.order label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+section.page-courses div.content div.header div.filter div.order label svg, section.page-projects div.content div.header div.filter div.order label svg {
+  width: 24px;
+  height: 24px;
+}
+section.page-courses div.content div.header div.filter div.order label svg path, section.page-projects div.content div.header div.filter div.order label svg path {
+  stroke: #858687;
+}
+section.page-courses div.content div.header div.filter div.order label:hover svg path, section.page-projects div.content div.header div.filter div.order label:hover svg path {
+  stroke: #C2C3C3;
+}
+section.page-courses div.content div.header div.filter div.order input, section.page-projects div.content div.header div.filter div.order input {
+  display: none;
+}
+section.page-courses div.content div.header div.filter div.order input:checked + label svg path, section.page-projects div.content div.header div.filter div.order input:checked + label svg path {
+  stroke: #F3F3F3;
+}
+section.page-courses div.content div.courses, section.page-courses div.content div.projects, section.page-projects div.content div.courses, section.page-projects div.content div.projects {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  margin-top: 16px;
+}
+section.page-courses div.content div.courses a, section.page-courses div.content div.projects a, section.page-projects div.content div.courses a, section.page-projects div.content div.projects a {
+  display: flex;
+  text-decoration: none;
+  transition: all 0.5s;
+  width: 240px;
+  height: 280px;
+  margin-bottom: 16px;
+}
+section.page-courses div.content div.courses a div.layout-courses, section.page-courses div.content div.courses a div.layout-projects, section.page-courses div.content div.projects a div.layout-courses, section.page-courses div.content div.projects a div.layout-projects, section.page-projects div.content div.courses a div.layout-courses, section.page-projects div.content div.courses a div.layout-projects, section.page-projects div.content div.projects a div.layout-courses, section.page-projects div.content div.projects a div.layout-projects {
+  width: 240px;
+  height: 280px;
+  border-radius: 8px;
+  background-color: #141518;
+  transition: all 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #1B1C1E;
+}
+section.page-courses div.content div.courses a div.layout-courses div.img-text, section.page-courses div.content div.courses a div.layout-projects div.img-text, section.page-courses div.content div.projects a div.layout-courses div.img-text, section.page-courses div.content div.projects a div.layout-projects div.img-text, section.page-projects div.content div.courses a div.layout-courses div.img-text, section.page-projects div.content div.courses a div.layout-projects div.img-text, section.page-projects div.content div.projects a div.layout-courses div.img-text, section.page-projects div.content div.projects a div.layout-projects div.img-text {
+  width: 93%;
+}
+section.page-courses div.content div.courses a div.layout-courses div.img-text img, section.page-courses div.content div.courses a div.layout-projects div.img-text img, section.page-courses div.content div.projects a div.layout-courses div.img-text img, section.page-courses div.content div.projects a div.layout-projects div.img-text img, section.page-projects div.content div.courses a div.layout-courses div.img-text img, section.page-projects div.content div.courses a div.layout-projects div.img-text img, section.page-projects div.content div.projects a div.layout-courses div.img-text img, section.page-projects div.content div.projects a div.layout-projects div.img-text img {
+  width: 100%;
+  height: 128px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 2px;
+}
+section.page-courses div.content div.courses a div.layout-courses div.img-text h1, section.page-courses div.content div.courses a div.layout-projects div.img-text h1, section.page-courses div.content div.projects a div.layout-courses div.img-text h1, section.page-courses div.content div.projects a div.layout-projects div.img-text h1, section.page-projects div.content div.courses a div.layout-courses div.img-text h1, section.page-projects div.content div.courses a div.layout-projects div.img-text h1, section.page-projects div.content div.projects a div.layout-courses div.img-text h1, section.page-projects div.content div.projects a div.layout-projects div.img-text h1 {
+  color: #F3F3F3;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: italic;
+  width: 100%;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+section.page-courses div.content div.courses a div.layout-courses div.img-text p, section.page-courses div.content div.courses a div.layout-projects div.img-text p, section.page-courses div.content div.projects a div.layout-courses div.img-text p, section.page-courses div.content div.projects a div.layout-projects div.img-text p, section.page-projects div.content div.courses a div.layout-courses div.img-text p, section.page-projects div.content div.courses a div.layout-projects div.img-text p, section.page-projects div.content div.projects a div.layout-courses div.img-text p, section.page-projects div.content div.projects a div.layout-projects div.img-text p {
+  color: #C2C3C3;
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  margin-top: 4px;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+}
+section.page-courses div.content div.courses a div.layout-courses div.img-text h5, section.page-courses div.content div.courses a div.layout-projects div.img-text h5, section.page-courses div.content div.projects a div.layout-courses div.img-text h5, section.page-courses div.content div.projects a div.layout-projects div.img-text h5, section.page-projects div.content div.courses a div.layout-courses div.img-text h5, section.page-projects div.content div.courses a div.layout-projects div.img-text h5, section.page-projects div.content div.projects a div.layout-courses div.img-text h5, section.page-projects div.content div.projects a div.layout-projects div.img-text h5 {
+  font-size: 10px;
+  font-weight: 400;
+  color: #858687;
+  margin-top: 12px;
+  width: 100%;
+  text-align: right;
+}
+section.page-courses div.content div.courses a div.layout-courses div.tech, section.page-courses div.content div.courses a div.layout-projects div.tech, section.page-courses div.content div.projects a div.layout-courses div.tech, section.page-courses div.content div.projects a div.layout-projects div.tech, section.page-projects div.content div.courses a div.layout-courses div.tech, section.page-projects div.content div.courses a div.layout-projects div.tech, section.page-projects div.content div.projects a div.layout-courses div.tech, section.page-projects div.content div.projects a div.layout-projects div.tech {
+  width: 96%;
+  height: 32px;
+  border-top: 1px solid rgba(133, 134, 135, 0.231372549);
+  margin-top: 4px;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section.page-courses div.content div.courses a div.layout-courses div.tech img, section.page-courses div.content div.courses a div.layout-projects div.tech img, section.page-courses div.content div.projects a div.layout-courses div.tech img, section.page-courses div.content div.projects a div.layout-projects div.tech img, section.page-projects div.content div.courses a div.layout-courses div.tech img, section.page-projects div.content div.courses a div.layout-projects div.tech img, section.page-projects div.content div.projects a div.layout-courses div.tech img, section.page-projects div.content div.projects a div.layout-projects div.tech img {
+  height: 24px;
+  width: auto;
+  margin: 4px;
+  border-radius: 2px;
+}
+section.page-courses div.content div.courses a:hover div.layout-courses, section.page-courses div.content div.courses a:hover div.layout-projects, section.page-courses div.content div.projects a:hover div.layout-courses, section.page-courses div.content div.projects a:hover div.layout-projects, section.page-projects div.content div.courses a:hover div.layout-courses, section.page-projects div.content div.courses a:hover div.layout-projects, section.page-projects div.content div.projects a:hover div.layout-courses, section.page-projects div.content div.projects a:hover div.layout-projects {
+  transform: scale(104%);
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 750px) {
+  section.page-courses div.content div.header, section.page-projects div.content div.header {
+    display: flex;
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding-bottom: 48px;
+  }
+  section.page-courses div.content div.header div.filter, section.page-projects div.content div.header div.filter {
+    margin-top: 16px;
+  }
+}
+/* -----------------------------------------------*/
+/* ################################################################## */
+/* ######################### PROJECT'S PAGE ######################### */
+section.page-apresentation-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(to top, #141518, #0c0d0f);
+}
+section.page-apresentation-project div.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+section.page-apresentation-project div.content div.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 64px;
+  border-bottom: 1px solid rgba(133, 134, 135, 0.231372549);
+}
+section.page-apresentation-project div.content div.header h1 {
+  font-size: 32px;
+  font-weight: 600;
+  font-style: italic;
+}
+section.page-apresentation-project div.content div.header div.date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section.page-apresentation-project div.content div.header div.date h3 {
+  font-size: 12px;
+  font-weight: 500;
+  color: #F3F3F3;
+  width: 100%;
+  text-align: right;
+}
+section.page-apresentation-project div.content div.header div.date h2 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #C2C3C3;
+  width: 100%;
+  text-align: right;
+}
+section.page-apresentation-project div.content div.project {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 48px;
+  width: 100%;
+}
+section.page-apresentation-project div.content div.project img {
+  width: 90%;
+  max-width: 512px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+section.page-apresentation-project div.content div.project div.description, section.page-apresentation-project div.content div.project div.technologies, section.page-apresentation-project div.content div.project div.links {
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section.page-apresentation-project div.content div.project div.description h1, section.page-apresentation-project div.content div.project div.technologies h1, section.page-apresentation-project div.content div.project div.links h1 {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 4px;
+  color: #F3F3F3;
+}
+section.page-apresentation-project div.content div.project div.description p, section.page-apresentation-project div.content div.project div.technologies p, section.page-apresentation-project div.content div.project div.links p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  color: #C2C3C3;
+}
+section.page-apresentation-project div.content div.project div.technologies div.imgs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+section.page-apresentation-project div.content div.project div.technologies div.imgs img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+section.page-apresentation-project div.content div.project div.links div#link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 4px;
+}
+section.page-apresentation-project div.content div.project div.links div#link svg {
+  width: 24px;
+  height: 24px;
+  padding: 4px;
+  border-radius: 4px;
+  background-color: #0c0d0f;
+}
+section.page-apresentation-project div.content div.project div.links div#link svg path {
+  fill: #9061FF;
+}
+section.page-apresentation-project div.content div.project div.links div#link a {
+  color: #F3F3F3;
+  margin-left: 24px;
+  transition: all 0.2s;
+}
+section.page-apresentation-project div.content div.project div.links div#link a:hover {
+  transform: scale(104%);
+}
+section.page-apresentation-project div.content div.project div.links div#link a:focus {
+  color: #9061FF;
+}
+section.page-apresentation-project div.content div.project div.links div#link a:active {
+  color: #9061FF;
+}
+
+/* --------------- RESPONSIVE MODE ---------------*/
+@media (max-width: 1200px) {
+  section.page-apresentation-project div.content {
+    width: 90%;
+  }
+}
+/* -----------------------------------------------*/
+/* ################################################################## *//*# sourceMappingURL=style.css.map */

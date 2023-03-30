@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar:wght@300&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Kdam+Thmor+Pro&family=Lato:wght@400;700;900&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@300&family=Quicksand:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Saira:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root
+{
+    --purple: #9061FF;
+    --purple-variant: #4c00ff;
+    --bg1: #0c0d0f;
+    --bg2: #141518;
+    --bg3: #1B1C1E;
+    --white: #f3f3f3;
+    --gray: #C2C3C3;
+    --gray2: #858687;
+    --line: #8586873b;
+    --red: #ff4646;
+    --green: #3cff3c;
+    --yellow: #f2ff3d;
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 720px;
+    width: 100%;
+}
+title
+{
+    text-transform: uppercase;
+}
+body 
+{
+    height: 100vh;
+    background: linear-gradient(180deg, var(--bg1), var(--bg1));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+}
+svg.logo
+{
+    width: 80px;
+    height: 80px;
+    margin-right: 16px;
+    position:absolute;
+    top: 8px;
+    left: 8px;
+}
+svg.logo path
+{
+    fill: var(--purple);
+}
+.logo-texto
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 8px;
+    width: 100%;
+    padding-bottom: 32px;
+    text-align: center;
+
+}
+.logo-texto .texto
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logo-texto .texto h1{
+    font-style: italic;
+    margin: 0;
+}
+.logo-texto .texto p{
+    margin: 0;
+    color: var(--gray);
+    text-align: center;
+}
+input#password
+{
+    font-family: 'Montserrat', sans-serif;
+    color: var(--white);
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    background-color: var(--bg2);
+    border: none;
+    border-radius: 8px;
+    margin-left: 8px;
+    max-width: 560px;
+    width: 95%;
+    height: 48px;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+section.box
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 92%;
+    box-shadow: 0 2px 2px var(--bg3);
+    border-radius: 8px;
+    background-color: var(--bg2);
+}
+div.password
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 64px;
+}
+svg.copy-paste
+{
+    margin-left: 8px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+svg.copy-paste path
+{
+    fill: var(--gray2);
+}
+svg.copy-paste:hover path
+{
+    fill: var(--gray);
+}
+svg.copy-paste:active path
+{
+    fill: var(--purple);
+}
+svg.refresh
+{
+    margin-left: 8px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+svg.refresh path
+{
+    stroke: var(--gray2);
+}
+svg.refresh:hover path
+{
+    stroke: var(--gray);
+}
+svg.refresh:active path
+{
+    stroke: var(--purple);
+}
+.secure-indicator
+{
+    height: 8px;
+    width: 100%;
+    background-color: var(--bg3);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.secure-indicator .bar
+{
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: all 0.2s;
+}
+.secure-indicator .bar.completed{
+    border-top-right-radius: 0;
+}
+.secure-indicator .bar.critical{
+    background-color: var(--red);
+}
+.secure-indicator .bar.warning{
+    background-color: var(--yellow);
+}
+.secure-indicator .bar.safe{
+    background-color: var(--green);
+}
+section.customize
+{
+    display: flex;
+    margin-top: 32px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 92%;
+    box-shadow: 0 2px 2px var(--bg3);
+    border-radius: 8px;
+    background-color: var(--bg2);
+}
+section.customize h3
+{
+    margin: 0;
+    margin-top: 8px;
+    margin-left: 8px;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: italic;
+
+}
+section.customize h4
+{
+    margin: 0;
+    margin-top: 0px;
+    color: var(--gray2);
+    margin-left: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: italic;
+
+}
+section.customize h4 span
+{
+    color: var(--purple);
+
+}
+section.customize input
+{
+    width: 100%;
+}
+div.length-password
+{
+    
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+div.length-password .actions
+{
+    display: flex;
+    width: 65%;
+    flex-direction: column;
+    align-items: center;
+}
+div.length-password .actions .slider
+{
+    appearance: none;
+    -webkit-appearance: none;
+    height: 8px;
+    background-color: var(--line);
+    outline: none;
+    border-radius: 8px;
+    width: 100%;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    margin-top: 8px;
+    margin-left: 16px;
+}
+div.length-password .actions .slider:hover
+{
+    opacity: 1;
+}
+div.length-password .actions .slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    background-color: var(--purple);
+    cursor: pointer;
+}
+div.length-password .actions .slider::-moz-slider-thumb{
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    background-color: var(--purple);
+    cursor: pointer;
+}
+div.length-password .config
+{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.checkbox-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    cursor: pointer;
+    margin-top: 8px;
+}
+.checkbox-container span.text{
+    margin-left: 20px;
+    font-size: 16px;
+}
+.checkbox-container input
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0px;
+    width: 0px;
+    opacity: 1;
+}
+.checkbox-container .checkmark
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    background-color: var(--line);
+    transition: all 0.2s;
+}
+.checkbox-container input:hover ~ .checkmark
+{
+    background-color: var(--gray2);
+}
+.checkbox-container input:checked ~ .checkmark
+{
+    background-color: var(--purple);
+}
+.checkbox-container  .checkmark::after
+{
+    content: "";
+    display: none;
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    height: 8px;
+    width: 3px;
+    border: solid var(--white);
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(45deg);
+}
+.checkbox-container input:checked ~ .checkmark::after
+{
+    display: block;
+}
+div.submit
+{
+    width: 92%;
+    height: 48px;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+button#copy
+{
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    background-color: var(--purple);
+    cursor: pointer;
+    opacity: 0.9;
+    transition: all .2s;
+
+}
+button#copy:hover
+{
+    opacity: 1;
+}
+button#copy:active
+{
+    opacity: 1;
+    background-color: var(--purple-variant);
+}
+button#copy h1
+{
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    color: var(--white);
+
+}
+button#copy svg
+{
+    width: 32px;
+    height: 32px;
+
+}
+button#copy svg path
+{
+    fill: var(--white);
+}
+@media only screen and (max-width: 700px) {
+    .logo{
+        display: none;
+    }
+}
+@media only screen and (max-width: 515px) {
+    .logo{
+        display: none;
+    }
+    .logo-texto .texto h1{
+        font-size: 24px;
+    }
+    .logo-texto .texto p{
+        font-size: 12px;
+    }
+    button#copy h1{
+        font-size: 16px;
+    }
+    section.customize h3{
+        font-size: 16px;
+    }
+    section.customize h4{
+        font-size: 12px;
+    }
+    .checkbox-container{
+        font-size: 16px;
+    }
+    .checkbox-container span.text{
+        font-size: 12px;
+    }
+    div.length-password .config{
+        width: 40%;
+    }
+    div.length-password .actions{
+        width: 55%;
+    }
+}
