@@ -1,7 +1,7 @@
 [
     {
         "link": "JavaScript Básico",
-        "img": "javascript.svg", 
+        "img": "javascript.svg",
         "title": "JavaScript Básico",
         "description": "Nesse curso de Javascript eu entendi toda básica dessa linguagem, iniciando com variávies, expressões e operadores, estrutura de decisão e repetição, etc.",
         "date": "02-22-2023",
@@ -17,7 +17,7 @@
     },
     {
         "link": "Lógica de Programação Avançada",
-        "img": "programacao.png", 
+        "img": "programacao.png",
         "title": "LÓGICA EM PROGRAMAÇÃO - Avançada",
         "description": "Nesse curso eu aprendi como um código funciona na prática, como é sua interação dele com a máquina, além de estruturas mais avançadas.",
         "date": "02-22-2023",
@@ -25,7 +25,7 @@
     },
     {
         "link": "JavaScript Avançado",
-        "img": "javascript.svg", 
+        "img": "javascript.svg",
         "title": "JavaScript Avançado",
         "description": "Já nesse curso avnaçado de Javascript, eu aprendi sobre Funções, Manipulação de Dados, Manipulação de Array, DOM, Promises, JSON, Ajax, etc.",
         "date": "02-28-2023",
@@ -41,7 +41,7 @@
     },
     {
         "link": "TypeScript Básico",
-        "img": "typescript.svg", 
+        "img": "typescript.svg",
         "title": "TypeScript Básico",
         "description": "No curso de TypeScript da Dev Samurai eu aprendi os conceitos básicos, a Tipagem de Dados, Orientação a Obejtos, Funções, etc.",
         "date": "03-03-2023",
@@ -62,6 +62,14 @@
         "description": "Nesse curso eu aprendi sobre o framework do CSS 'Bootstrap', na qual eu não o conhecia e pude conhecer e desenvolver meus porjetos com classes prontas e pre estabelecidas pelo framework, o que possibilita em uma produtividade mais eficiente.",
         "date": "03-23-2023",
         "tech": ["bootstrap"]
+    },
+    {
+        "link": "Fundamentos do React.JS",
+        "img": "react.svg",
+        "title": "Fundamentos do React JS",
+        "description": "No curso de React eu aprendi todos os fundamentos do React, os conceitos de Components,States, Props, etc. Aprendi a como criar um aplicação Web com React JS e tudo que essa Lib do Javascript é capaz de fazer.",
+        "date": "03-28-2023",
+        "tech": ["react"]
     }
 
 ]
