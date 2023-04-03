@@ -43,5 +43,14 @@
         "description": "Meu primeiro projeto em React JS. Esse projeto eu desenvolvi para aplicar meus conhecimentos em React JS e também meus conhecimentos em HTML CSS e Javascript. O projeto consiste numa lista de tarefas simples em que o usuário adicione ou exclua tarefas em uma lista. Nesse projeto eu não trabalhei com o Local Storage, logo as informações são resetadas quando o usuário recarrega a página, isso porque o foco não era trabalhar com a memória local, sendo assim o projeto foi apenas para aplicar os conhecimentos, fundamentos e conceitos do React, como os: States, Components, Props, JSX, etc...",
         "date": "03-29-2023",
         "tech": ["html5", "css3", "javascript", "react"]
+    },
+    {
+        "link": "https://cr-controlefinanceiro-0104.netlify.app/",
+        "repository": "https://github.com/NielRodrigues/",
+        "img": "controle-financeiro.png",
+        "title": "Controle Financeiro",
+        "description": "Esse projeto eu contrui um aplicação web para controle financeiro, na qual o usuário detalhe seu recebimnetos e gastos. Para esse projeto, eu construi uma aplicação usando o React JS. O conceito desse projeto foi o mesmo utilizado no projeto da <a href='https://cr-todolist-2903.netlify.app/' style='text-decoration:none; color:#9061FF;'>Lista de Tarefas</a>, porém eu ainda utilizei o Local Storage para as informações não se perderem quando recarregar a página. Todos os fundamentos de React foram utilizado nesse projeto, bem como os conceitos avançados em HTML, CSS e Javascript",
+        "date": "04-01-2023",
+        "tech": ["html5", "css3", "javascript", "react"]
     }
 ]
