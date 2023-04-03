@@ -245,7 +245,7 @@
                             `<img title="${project[i].tech[cont].toUpperCase()}" src="../src/image/${project[i].tech[cont].split(' ').join('-').toLowerCase()}.svg" alt="LOGO ${project[i].tech[cont].toUpperCase()}">`
                         }
 
-                        document.querySelector('a#link-project').href = `./${project[i].link}.html`
+                        document.querySelector('a#link-project').href = `${project[i].link}`
                         document.querySelector('a#link-repository').href = project[i].repository
 
                         break
