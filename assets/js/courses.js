@@ -6,20 +6,20 @@ function loadCourses() {
     xhr.open("GET", "./assets/js/json/list-courses.json") // Método que "abre" a conexão com os dados
     xhr.send(null) // Método que faz a chamada
 
-    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback 
+    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback
         if(xhr.readyState === 4){ // Estado 'positivo'
-            data = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript 
+            data = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript
 
             const selectYear = document.querySelector('select#select-year'),
             selectTech = document.querySelector('select#select-tech')
-            
+
             selectYear.innerHTML = `<option value="y-all">Todos</option>`
             selectTech.innerHTML = `<option value="t-all">Todas</option>`
             var years = []
             for(let i = 0; i < data.length; i++){
-                
+
                 var date = Number(data[i].date.split('-')[2])
-                
+
                 if(years.includes(date)){
                     continue
                 }
@@ -54,11 +54,11 @@ function loadCourses() {
             for(let techLen = 0; techLen < techs.length; techLen++){
                 selectTech.innerHTML += `<option value="${techs[techLen].toLowerCase()}">${techs[techLen].toUpperCase()}</option>`
             }
-            
+
             addCourse(data)
-            
+
         }
-    }   
+    }
 }
 const addCourse = (data) => {
 
@@ -67,7 +67,6 @@ const addCourse = (data) => {
     selectTech = document.querySelector('select#select-tech'),
     latest = document.querySelector('input#latest'),
     oldest = document.querySelector('input#oldest')
-    console.log(`===== ${selectTech.value.toUpperCase()} ==== \n\n`)
 
     if(selectYear.value == 'y-all'){
         if(selectTech.value == 't-all'){
@@ -86,7 +85,7 @@ const addCourse = (data) => {
                     `
                     <a href="./courses/${data[i].title.split(" ").join('-').toLowerCase()}.html">
                         <div class="layout-courses">
-                            
+
                             <div class="img-text">
                                 <img src="./src/image/${data[i].img}" alt="iMAGEM DO CURSO ${data[i].title.toUpperCase()}">
                                 <h1 title="${data[i].title.toUpperCase()}">${data[i].title.toUpperCase()}</h1>
@@ -94,7 +93,7 @@ const addCourse = (data) => {
                                 <h5>${date[1]}/${date[0]}/${date[2]}</h5>
                             </div>
                             <div class="tech" id="course-${data[i].title.split(" ").join('-').toLowerCase()}">
-                            
+
                             </div>
                         </div>
                     </a>`
@@ -119,7 +118,7 @@ const addCourse = (data) => {
                     `
                     <a href="./courses/${data[i].title.split(" ").join('-').toLowerCase()}.html">
                         <div class="layout-courses">
-                            
+
                             <div class="img-text">
                                 <img src="./src/image/${data[i].img}" alt="iMAGEM DO CURSO ${data[i].title.toUpperCase()}">
                                 <h1 title="${data[i].title.toUpperCase()}">${data[i].title.toUpperCase()}</h1>
@@ -127,7 +126,7 @@ const addCourse = (data) => {
                                 <h5>${date[1]}/${date[0]}/${date[2]}</h5>
                             </div>
                             <div class="tech" id="course-${data[i].title.split(" ").join('-').toLowerCase()}">
-                            
+
                             </div>
                         </div>
                     </a>`
@@ -157,7 +156,7 @@ const addCourse = (data) => {
                         `
                         <a href="./courses/${data[i].title.split(" ").join('-').toLowerCase()}.html">
                             <div class="layout-courses">
-                                
+
                                 <div class="img-text">
                                     <img src="./src/image/${data[i].img}" alt="iMAGEM DO CURSO ${data[i].title.toUpperCase()}">
                                     <h1 title="${data[i].title.toUpperCase()}">${data[i].title.toUpperCase()}</h1>
@@ -165,7 +164,7 @@ const addCourse = (data) => {
                                     <h5>${date[1]}/${date[0]}/${date[2]}</h5>
                                 </div>
                                 <div class="tech" id="course-${data[i].title.split(" ").join('-').toLowerCase()}">
-                                
+
                                 </div>
                             </div>
                         </a>`
@@ -193,7 +192,7 @@ const addCourse = (data) => {
                         `
                         <a href="./courses/${data[i].title.split(" ").join('-').toLowerCase()}.html">
                             <div class="layout-courses">
-                                
+
                                 <div class="img-text">
                                     <img src="./src/image/${data[i].img}" alt="iMAGEM DO CURSO ${data[i].title.toUpperCase()}">
                                     <h1 title="${data[i].title.toUpperCase()}">${data[i].title.toUpperCase()}</h1>
@@ -201,7 +200,7 @@ const addCourse = (data) => {
                                     <h5>${date[1]}/${date[0]}/${date[2]}</h5>
                                 </div>
                                 <div class="tech" id="course-${data[i].title.split(" ").join('-').toLowerCase()}">
-                                
+
                                 </div>
                             </div>
                         </a>`
@@ -228,14 +227,13 @@ const addCourse = (data) => {
                 })
                 for(let i = 0; i < data.length; i++){
                     let date = data[i].date.split('-')
-                    console.log(`${date[2]} =? ${selectYear.value}`)
                     var techs = data[i].tech.join('-').toLowerCase().split('-')
                     if(date[2] == selectYear.value){
                         addCourse.innerHTML +=
                         `
                         <a href="./courses/${data[i].title.split(" ").join('-').toLowerCase()}.html">
                             <div class="layout-courses">
-                                
+
                                 <div class="img-text">
                                     <img src="./src/image/${data[i].img}" alt="iMAGEM DO CURSO ${data[i].title.toUpperCase()}">
                                     <h1 title="${data[i].title.toUpperCase()}">${data[i].title.toUpperCase()}</h1>
@@ -243,7 +241,7 @@ const addCourse = (data) => {
                                     <h5>${date[1]}/${date[0]}/${date[2]}</h5>
                                 </div>
                                 <div class="tech" id="course-${data[i].title.split(" ").join('-').toLowerCase()}">
-                                
+
                                 </div>
                             </div>
                         </a>`
@@ -265,14 +263,13 @@ const addCourse = (data) => {
                 })
                 for(let i = 0; i < data.length; i++){
                     let date = data[i].date.split('-')
-                    console.log(`${date[2]} =? ${selectYear.value}`)
                     var techs = data[i].tech.join('-').toLowerCase().split('-')
                     if(date[2] == selectYear.value){
                         addCourse.innerHTML +=
                         `
                         <a href="./courses/${data[i].title.split(" ").join('-').toLowerCase()}.html">
                             <div class="layout-courses">
-                                
+
                                 <div class="img-text">
                                     <img src="./src/image/${data[i].img}" alt="iMAGEM DO CURSO ${data[i].title.toUpperCase()}">
                                     <h1 title="${data[i].title.toUpperCase()}">${data[i].title.toUpperCase()}</h1>
@@ -280,7 +277,7 @@ const addCourse = (data) => {
                                     <h5>${date[1]}/${date[0]}/${date[2]}</h5>
                                 </div>
                                 <div class="tech" id="course-${data[i].title.split(" ").join('-').toLowerCase()}">
-                                
+
                                 </div>
                             </div>
                         </a>`
@@ -305,14 +302,13 @@ const addCourse = (data) => {
                 })
                 for(let i = 0; i < data.length; i++){
                     let date = data[i].date.split('-')
-                    console.log(`${date[2]} =? ${selectYear.value}`)
                     var techs = data[i].tech.join('-').toLowerCase().split('-')
                     if((techs.includes(selectTech.value)) && (date[2] == selectYear.value)){
                         addCourse.innerHTML +=
                         `
                         <a href="./courses/${data[i].title.split(" ").join('-').toLowerCase()}.html">
                             <div class="layout-courses">
-                                
+
                                 <div class="img-text">
                                     <img src="./src/image/${data[i].img}" alt="iMAGEM DO CURSO ${data[i].title.toUpperCase()}">
                                     <h1 title="${data[i].title.toUpperCase()}">${data[i].title.toUpperCase()}</h1>
@@ -320,7 +316,7 @@ const addCourse = (data) => {
                                     <h5>${date[1]}/${date[0]}/${date[2]}</h5>
                                 </div>
                                 <div class="tech" id="course-${data[i].title.split(" ").join('-').toLowerCase()}">
-                                
+
                                 </div>
                             </div>
                         </a>`
@@ -342,14 +338,13 @@ const addCourse = (data) => {
                 })
                 for(let i = 0; i < data.length; i++){
                     let date = data[i].date.split('-')
-                    console.log(`${date[2]} =? ${selectYear.value}`)
                     var techs = data[i].tech.join('-').toLowerCase().split('-')
                     if((techs.includes(selectTech.value)) && (date[2] == selectYear.value)){
                         addCourse.innerHTML +=
                         `
                         <a href="./courses/${data[i].title.split(" ").join('-').toLowerCase()}.html">
                             <div class="layout-courses">
-                                
+
                                 <div class="img-text">
                                     <img src="./src/image/${data[i].img}" alt="iMAGEM DO CURSO ${data[i].title.toUpperCase()}">
                                     <h1 title="${data[i].title.toUpperCase()}">${data[i].title.toUpperCase()}</h1>
@@ -357,7 +352,7 @@ const addCourse = (data) => {
                                     <h5>${date[1]}/${date[0]}/${date[2]}</h5>
                                 </div>
                                 <div class="tech" id="course-${data[i].title.split(" ").join('-').toLowerCase()}">
-                                
+
                                 </div>
                             </div>
                         </a>`
@@ -369,7 +364,7 @@ const addCourse = (data) => {
                 }
             }
             else {addCourse.innerHTML = ''}
-        }  
+        }
     }
 }
 loadCourses()
@@ -391,12 +386,11 @@ function eventsSelect(){
     xhr.open("GET", "./assets/js/json/list-courses.json") // Método que "abre" a conexão com os dados
     xhr.send(null) // Método que faz a chamada
 
-    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback 
+    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback
         if(xhr.readyState === 4){ // Estado 'positivo'
-            data = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript 
+            data = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript
             addCourse(data)
-            
-        }
-    } 
-}
 
+        }
+    }
+}

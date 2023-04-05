@@ -6,20 +6,20 @@ function loadCertificates() {
     xhr.open("GET", "./assets/js/json/list-certificates.json") // Método que "abre" a conexão com os dados
     xhr.send(null) // Método que faz a chamada
 
-    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback 
+    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback
         if(xhr.readyState === 4){ // Estado 'positivo'
-            data = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript 
+            data = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript
 
             const selectYear = document.querySelector('select#select-year'),
             selectTech = document.querySelector('select#select-tech')
-            
+
             selectYear.innerHTML = `<option value="y-all">Todos</option>`
             selectTech.innerHTML = `<option value="t-all">Todas</option>`
             var years = []
             for(let i = 0; i < data.length; i++){
-                
+
                 var date = Number(data[i].date.split('-')[2])
-                
+
                 if(years.includes(date)){
                     continue
                 }
@@ -54,11 +54,11 @@ function loadCertificates() {
             for(let techLen = 0; techLen < techs.length; techLen++){
                 selectTech.innerHTML += `<option value="${techs[techLen].toLowerCase()}">${techs[techLen].toUpperCase()}</option>`
             }
-            
+
             addCertificate(data)
-            
+
         }
-    }   
+    }
 }
 const addCertificate = (data) => {
 
@@ -67,7 +67,6 @@ const addCertificate = (data) => {
     selectTech = document.querySelector('select#select-tech'),
     latest = document.querySelector('input#latest'),
     oldest = document.querySelector('input#oldest')
-    console.log(`===== ${selectTech.value.toUpperCase()} ==== \n\n`)
 
     if(selectYear.value == 'y-all'){
         if(selectTech.value == 't-all'){
@@ -94,7 +93,7 @@ const addCertificate = (data) => {
                             </div>
                         </div>
                     </a>`
-                
+
                 }
             }
             else if(oldest.checked){
@@ -120,7 +119,7 @@ const addCertificate = (data) => {
                             </div>
                         </div>
                     </a>`
-                
+
                 }
             }
             else {addCertificate.innerHTML = ''}
@@ -198,7 +197,6 @@ const addCertificate = (data) => {
                 })
                 for(let i = 0; i < data.length; i++){
                     let date = data[i].date.split('-')
-                    console.log(`${date[2]} =? ${selectYear.value}`)
                     var techs = data[i].tech.join('-').toLowerCase().split('-')
                     if(date[2] == selectYear.value){
                         addCertificate.innerHTML +=
@@ -227,7 +225,6 @@ const addCertificate = (data) => {
                 })
                 for(let i = 0; i < data.length; i++){
                     let date = data[i].date.split('-')
-                    console.log(`${date[2]} =? ${selectYear.value}`)
                     var techs = data[i].tech.join('-').toLowerCase().split('-')
                     if(date[2] == selectYear.value){
                         addCertificate.innerHTML +=
@@ -259,7 +256,6 @@ const addCertificate = (data) => {
                 })
                 for(let i = 0; i < data.length; i++){
                     let date = data[i].date.split('-')
-                    console.log(`${date[2]} =? ${selectYear.value}`)
                     var techs = data[i].tech.join('-').toLowerCase().split('-')
                     if((techs.includes(selectTech.value)) && (date[2] == selectYear.value)){
                         addCertificate.innerHTML +=
@@ -288,7 +284,6 @@ const addCertificate = (data) => {
                 })
                 for(let i = 0; i < data.length; i++){
                     let date = data[i].date.split('-')
-                    console.log(`${date[2]} =? ${selectYear.value}`)
                     var techs = data[i].tech.join('-').toLowerCase().split('-')
                     if((techs.includes(selectTech.value)) && (date[2] == selectYear.value)){
                         addCertificate.innerHTML +=
@@ -307,7 +302,7 @@ const addCertificate = (data) => {
                 }
             }
             else {addCertificate.innerHTML = ''}
-        }  
+        }
     }
 }
 loadCertificates()
@@ -329,12 +324,11 @@ function eventsSelect(){
     xhr.open("GET", "./assets/js/json/list-certificates.json") // Método que "abre" a conexão com os dados
     xhr.send(null) // Método que faz a chamada
 
-    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback 
+    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback
         if(xhr.readyState === 4){ // Estado 'positivo'
-            data = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript 
+            data = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript
             addCertificate(data)
-            
-        }
-    } 
-}
 
+        }
+    }
+}

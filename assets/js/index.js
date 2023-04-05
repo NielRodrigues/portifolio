@@ -11,13 +11,10 @@ function menu_habilities(){
         var numPercent = 16
     }
 
-    console.log('Tech', input_tecnologies.checked)
-    console.log('Cour', input_courses.checked)
-    console.log('Cert', input_certificates.checked)
+
 
     if(input_tecnologies.checked){
 
-        console.log('TECH CHECKED \N\N =============')
         document.querySelector('div.tecnologies').classList.remove('hidden')
         document.querySelector('div.tecnologies').classList.add('show')
 
@@ -31,7 +28,6 @@ function menu_habilities(){
 
     } else if(input_courses.checked){
 
-        console.log('COURSES CHECKED \N\N =============')
 
 
         document.querySelector('div.courses').classList.remove('hidden')
@@ -42,13 +38,12 @@ function menu_habilities(){
         document.querySelector('div.certificates').classList.add('hidden')
         document.querySelector('div.certificates').classList.remove('show')
 
-        
+
         document.querySelector('div.l16').style.marginLeft = '16%'
         document.querySelector('div.l32').style.marginLeft = '32%'
 
     } else if(input_certificates.checked){
 
-        console.log('CERTIFICATES CHECKED \N\N =============')
 
 
         document.querySelector('div.certificates').classList.remove('hidden')
@@ -93,7 +88,7 @@ function see_techs(){
     if(link_techs.textContent.toLowerCase() == 'ver todas'){
         div_techs.innerHTML = ''
         for(let i = 0; i < 8; i++){
-            div_techs.innerHTML += 
+            div_techs.innerHTML +=
             `<div class="bg-tech-learned">
                 <img title="${tecnologies_list[i].replace('.svg', '').replace('.png', '').toUpperCase()}" src="./src/image/${tecnologies_list[i].split(' ').join('-')}" alt="LOGO ${tecnologies_list[i].replace('.svg', '').replace('.png', '').toUpperCase()}">
             </div>
@@ -103,7 +98,7 @@ function see_techs(){
     else{
         div_techs.innerHTML = ''
         for(let i = 0; i < tecnologies_list.length; i++){
-            div_techs.innerHTML += 
+            div_techs.innerHTML +=
             `<div class="bg-tech-learned">
                 <img title="${tecnologies_list[i].replace('.svg', '').replace('.png', '').toUpperCase()}" src="./src/image/${tecnologies_list[i].split(' ').join('-')}" alt="LOGO ${tecnologies_list[i].replace('.svg', '').replace('.png', '').toUpperCase()}">
             </div>
@@ -132,29 +127,29 @@ link_techs.addEventListener('click', () =>{
 
 function loadCourses(){
     const xhr = new XMLHttpRequest() // classe responsável por fazer chamadas remotas
-    
+
 
     // xhr.open(, )
     xhr.open("GET", "./assets/js/json/list-courses.json") // Método que "abre" a conexão com os dados
     xhr.send(null) // Método que faz a chamada
 
-    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback 
+    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback
         if(xhr.readyState === 4){ // Estado 'positivo'
-            var courses = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript 
-            
+            var courses = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript
+
             for(let i = 0; i < courses.length; i++){
                 document.querySelector('div.owl-carousel').innerHTML +=
                 `<div class="item">
                     <a href="./courses/${courses[i].title.split(" ").join('-').toLowerCase()}.html">
                         <div class="layout-courses">
-                            
+
                             <div class="img-text">
                                 <img src="./src/image/${courses[i].img}" alt="iMAGEM DO CURSO ${courses[i].title.toUpperCase()}">
                                 <h1>${courses[i].title.toUpperCase()}</h1>
                                 <p>${courses[i].description}</p>
                             </div>
                             <div class="tech" id="course-${courses[i].title.split(" ").join('-').toLowerCase()}">
-                            
+
                             </div>
                         </div>
                     </a>
@@ -164,9 +159,9 @@ function loadCourses(){
                     `<img title="${courses[i].tech[tech_l].toUpperCase()}" src="./src/image/${courses[i].tech[tech_l].split(" ").join('-').toLowerCase()}.svg" alt="">`
                 }
             }
-            
+
         }
-    } 
+    }
 }
 
 loadCourses()
@@ -181,16 +176,16 @@ loadCourses()
 
 function loadCertificates(){
     const xhr = new XMLHttpRequest() // classe responsável por fazer chamadas remotas
-    
+
 
     // xhr.open(, )
     xhr.open("GET", "./assets/js/json/list-certificates.json") // Método que "abre" a conexão com os dados
     xhr.send(null) // Método que faz a chamada
 
-    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback 
+    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback
         if(xhr.readyState === 4){ // Estado 'positivo'
-            var certificates = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript 
-            
+            var certificates = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript
+
             for(let i = 0; i < 6; i++){
                 document.querySelector('div.certificates-conquered').innerHTML +=
                 `<a href="./certificates/${certificates[i].link}.pdf" target="_blank">
@@ -204,9 +199,9 @@ function loadCertificates(){
                 </a>
                 `
             }
-            
+
         }
-    } 
+    }
 }
 
 loadCertificates()
@@ -218,19 +213,19 @@ loadCertificates()
 
 function loadProjects(){
     const xhr = new XMLHttpRequest() // classe responsável por fazer chamadas remotas
-    
+
 
     // xhr.open(, )
     xhr.open("GET", "./assets/js/json/list-projects.json") // Método que "abre" a conexão com os dados
     xhr.send(null) // Método que faz a chamada
 
-    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback 
+    xhr.onreadystatechange = () => { // Quando terminar de fazer a requisição vai invocar a função de callback
         if(xhr.readyState === 4){ // Estado 'positivo'
-            var projects = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript 
-            
+            var projects = JSON.parse(xhr.responseText) // transformado dados da API em JSON para um Object JavaScript
+
             for(let i = 0; i < projects.length; i++){
                 document.querySelector('div.oc-2').innerHTML +=
-            
+
                 `<div class="item">
                     <a href="./projects/${projects[i].title.split(' ').join('-').toLowerCase()}.html">
                         <div class="layout-project">
@@ -240,7 +235,7 @@ function loadProjects(){
                                 <p>${projects[i].description}</p>
                             </div>
                             <div class="tech" id="project-${projects[i].title.split(" ").join('-').toLowerCase()}">
-                                
+
                             </div>
                         </div>
                     </a>
@@ -248,12 +243,12 @@ function loadProjects(){
                 `
                 for(let project_tech_l = 0; project_tech_l < projects[i].tech.length; project_tech_l++){
                     document.querySelector(`div#project-${projects[i].title.split(" ").join('-').toLowerCase()}`).innerHTML +=
-                    `<img title="${projects[i].tech[project_tech_l].toUpperCase()}" src="./src/image/${projects[i].tech[project_tech_l].split(" ").join('-').toLowerCase()}.svg" alt="">`    
+                    `<img title="${projects[i].tech[project_tech_l].toUpperCase()}" src="./src/image/${projects[i].tech[project_tech_l].split(" ").join('-').toLowerCase()}.svg" alt="">`
                 }
             }
-            
+
         }
-    } 
+    }
 }
 
 loadProjects()
