@@ -61,5 +61,14 @@
         "description": "Esse projeto em ReactJS foi um projeto que eu utilizei todos os fundamentos avançados que eu aprendi dessa Lib, utilizando States, Props, Components, etc, além dos meus conhecimentos em JavaScript, HTML e CSS.Na parte de Front End eu desenvolvi a estilização utilizando o Styled Components. Já para a Requisição da API do GitHub eu utilizei o Axios para pegar os dados dessa API de maneira assíncrona e salvando todos esse dados, como as informações do Usuário e os Repositórios, em uma variável de estado dentro de um componente funcional.",
         "date": "04-05-2023",
         "tech": ["html5", "css3", "javascript", "react"]
+    },
+    {
+        "link": "https://cr-weatherapp-1004.netlify.app/",
+        "repository": "https://github.com/NielRodrigues/api-clima-e-tempo",
+        "img": "weather-app.png",
+        "title": "Weather APP",
+        "description": "Esse é um aplicativo construindo em React que consulta o clima e tempo de cada cidade. O aplicativo consome uma API grátis (Open Weather) na qual o usuário pesquise por uma cidade e o aplicativo retorne dados e informações e exiba na tela. Para esse aplicativo foi feita a requisição de API utilizando 'FETCH'. Os conceitos como States, Components, Styled Components, JSX, Requisição de API, foram usados nesse projeto.",
+        "date": "04-10-2023",
+        "tech": ["html5", "css3", "javascript", "react"]
     }
 ]
