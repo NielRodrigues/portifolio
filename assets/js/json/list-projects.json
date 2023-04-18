@@ -70,5 +70,14 @@
         "description": "Esse é um aplicativo construindo em React que consulta o clima e tempo de cada cidade. O aplicativo consome uma API grátis (Open Weather) na qual o usuário pesquise por uma cidade e o aplicativo retorne dados e informações e exiba na tela. Para esse aplicativo foi feita a requisição de API utilizando 'FETCH'. Os conceitos como States, Components, Styled Components, JSX, Requisição de API, foram usados nesse projeto.",
         "date": "04-10-2023",
         "tech": ["html5", "css3", "javascript", "react"]
+    },
+    {
+        "link": "https://cr-pedidoonline-1704.netlify.app/",
+        "repository": "https://github.com/NielRodrigues/pizzaria",
+        "img": "pedido-online.png",
+        "title": "Pedido Online",
+        "description": "O 'Pedido Online' foi um projeto que desenvolvi para exemplicar um sistema de um restaurante delivery. O projeto foi feito em React com TypeScript aplicando todos os fundamentos de React, como Components, States e Props, além de Styled Components, Requisição de uma API interna utilizando o Axios e criação de Hooks personalizados.",
+        "date": "04-17-2023",
+        "tech": ["html5", "css3", "typescript", "react"]
     }
 ]
