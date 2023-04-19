@@ -70,6 +70,13 @@
         "description": "No curso de React eu aprendi todos os fundamentos do React, os conceitos de Components,States, Props, etc. Aprendi a como criar um aplicação Web com React JS e tudo que essa Lib do Javascript é capaz de fazer.",
         "date": "03-29-2023",
         "tech": ["react"]
+    },
+    {
+        "link": "Node.JS Básico",
+        "img": "node-js.svg",
+        "title": "Node.JS Básico",
+        "description": "Nesse curso de 'Node.JS Básico' eu conseguir aprender todos os fundamentos e conceitos do NodeJS. Eu também aprendi os conceitos de uma API Rest, os status que um servidor pode repassar para o usuário, a como criar um servidor em ExpressJS, consumir parâmetros Query e Route, e utilizar o Insomnia.",
+        "date": "04-19-2023",
+        "tech": ["node-js"]
     }
-
 ]
