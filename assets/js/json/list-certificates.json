@@ -78,5 +78,13 @@
         "description": "Nesse curso de 'Node.JS Básico' eu conseguir aprender todos os fundamentos e conceitos do NodeJS. Eu também aprendi os conceitos de uma API Rest, os status que um servidor pode repassar para o usuário, a como criar um servidor em ExpressJS, consumir parâmetros Query e Route, e utilizar o Insomnia.",
         "date": "04-19-2023",
         "tech": ["nodejs"]
+    },
+    {
+        "link": "Banco de Dados Básico",
+        "img": "postgresql.svg",
+        "title": "Banco de Dados Básico",
+        "description": "Esse foi o primeiro curso sobre Banco de Dados que eu fiz. O gerecidado de Banco de Dados utilizado foi o PostgreSQL. Nesse curso eu aprendi como funciona um banco de dados e seus conceitos básicos, estruturar um banco de dados (MER), atributos e tipos de dados, além de aprender os comandos básicos da manipulação de tabelas, como INSERT, SELECT, UPDATE, DELETE, etc...",
+        "date": "04-25-2023",
+        "tech": ["postgresql"]
     }
 ]
