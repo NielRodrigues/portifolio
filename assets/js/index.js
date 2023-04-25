@@ -78,7 +78,7 @@ document.querySelector('div.menu-habilities').addEventListener('change', menu_ha
 
 
 // =============================== TECNOLOGIES =============================== //
-const tecnologies_list = ['html5.svg', 'css3.svg', 'javascript.svg', 'typescript.svg', 'react.svg', 'node js.svg', 'sass.svg', 'python.png', 'c sharp.png']
+const tecnologies_list = ['html5.svg', 'css3.svg', 'javascript.svg', 'typescript.svg', 'react.svg', 'node js.svg', 'sass.svg', 'postgresql.svg', 'python.png', 'c sharp.png']
 
 const div_techs = document.querySelector('div.techs'),
 link_techs = document.querySelector('p#link-techs')
