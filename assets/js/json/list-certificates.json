@@ -86,5 +86,13 @@
         "description": "Esse foi o primeiro curso sobre Banco de Dados que eu fiz. O gerecidador de Banco de Dados utilizado foi o PostgreSQL. Nesse curso eu aprendi como funciona um banco de dados e seus conceitos básicos, estruturar um banco de dados (MER), atributos e tipos de dados, além de aprender os comandos básicos da manipulação de tabelas, como INSERT, SELECT, UPDATE, DELETE, etc...",
         "date": "04-25-2023",
         "tech": ["postgresql"]
+    },
+    {
+        "link": "Banco de Dados Avançado",
+        "img": "postgresql.svg",
+        "title": "Banco de Dados Avançado",
+        "description": "Nesse curso sobre Banco de Dados avançado eu aprendi a manipular as tabelas com filtros avançados com o uso do LIKE, IN, BETWEEN e LIMIT. Além de funções de agregação, combinar tabelas com o uso do JOIN, fazer transações e funções e os conceitos de ORMs, nuvens e NoSQL.",
+        "date": "05-03-2023",
+        "tech": ["postgresql"]
     }
 ]
