@@ -79,5 +79,14 @@
         "description": "O 'Pedido Online' foi um projeto que desenvolvi para exemplicar um sistema de um restaurante delivery. O projeto foi feito em React com TypeScript aplicando todos os fundamentos de React, como Components, States e Props, além de Styled Components, Requisição de uma API interna utilizando o Axios e criação de Hooks personalizados.",
         "date": "04-17-2023",
         "tech": ["html5", "css3", "typescript", "react"]
+    },
+    {
+        "link": "https://coinradar.netlify.app/",
+        "repository": "https://github.com/NielRodrigues/CoinRadar",
+        "img": "coinradar.png",
+        "title": "Coin Radar",
+        "description": "O 'Coin Radar' é um aplicativo PWA feito em React. Ele serve para exibir as cotações de várias moedas em tempo real fazendo a conversão para outras moedas. Esse projeto foi o primeiro aplicativo em PWA que fiz utilizando React, nele foi feito requisições de API (awesomeapi) para adquirir as cotações, além de conceitos do styled components, uso do PropTypes, useSates e useEffect.",
+        "date": "05-10-2023",
+        "tech": ["html5", "css3", "javascript", "react"]
     }
 ]
