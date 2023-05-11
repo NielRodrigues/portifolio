@@ -94,5 +94,13 @@
         "description": "Nesse curso sobre Banco de Dados avançado eu aprendi a manipular as tabelas com filtros avançados com o uso do LIKE, IN, BETWEEN e LIMIT. Além de funções de agregação, combinar tabelas com o uso do JOIN, fazer transações e funções e os conceitos de ORMs, nuvens e NoSQL.",
         "date": "05-03-2023",
         "tech": ["postgresql"]
+    },
+    {
+        "link": "Node.JS Avançado",
+        "img": "node-js.svg",
+        "title": "Node.JS Avançado",
+        "description": "No curso de Node JS Avançado eu aprendi como funciona toda Arquitetura de código MVC e fazer um estrutura de projeto moderna. Além de trabalhar com ExpressJS eu trabalhei com framework ORM Sequelize com uso de Controllers e Migrations para trabalhar com Banco de Dados, criei uma API Profissional e Middlewares, e trabalhei com algumas bibliotecas externas como Multer, Nodemailer, e JWT.  ",
+        "date": "05-11-2023",
+        "tech": ["nodejs"]
     }
 ]
