@@ -1,5 +1,5 @@
 var form = document.getElementById("send-mensage");
-    
+
     async function handleSubmit(event) {
       event.preventDefault();
       var status = document.getElementById("form-status");
@@ -19,12 +19,12 @@ var form = document.getElementById("send-mensage");
             if (Object.hasOwn(data, 'errors')) {
               status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
             } else {
-              status.innerHTML = "Houve um problema ao enviar o email. Porfavor tente novamente!"
+              status.innerHTML = "Houve um problema ao enviar o email. Por favor tente novamente!"
             }
           })
         }
       }).catch(error => {
-        status.innerHTML = "Houve um problema ao enviar o email. Porfavor tente novamente!"
+        status.innerHTML = "Houve um problema ao enviar o email. Por favor tente novamente!"
       });
     }
     form.addEventListener("submit", handleSubmit)
