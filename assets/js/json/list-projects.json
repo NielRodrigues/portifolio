@@ -97,5 +97,14 @@
         "description": "💻 Projeto: <br> Esse é um projeto fullstack simples feito em ReactJS + NodeJS. Ele serve para registrar novas anotações dos usuários (uma espécie de bloco de notas online) que são salvas automaticamente e pode ser acessada de qualquer dispositivo, e para registrar essas anotações é necessário registrar uma conta no site e fazer o login.<br><br>🛠️ Tecnologias utilizadas:<br>▪ ReactJS: utilizei o ReactJS para criar a parte do Frontend, eu escolhi ele por causa da sua criação de intefarce com componentização.<br>▪ NodeJS: o NodeJS foi utilizado para criar a API e consumir os dados diretamente do Banco de Dados.<br>▪ PostgreSQL: o Banco de Dados utilizado nesse projeto foi o PostgreSQL pela sua facilidade de se relacionar/conectar com NodeJS.<br>▪ ExpressJS: o Express foi o framework utilizado para realizar as requisições HTTP do lado do servidor pela sua facilidade na sua integração e organização do nosso projeto no padrão MVC.<br>▪ Sequelize: o ORM usado para esse projeto foi o Sequelize para realizar o CRUD e nos conectarmos e operarmos o Banco de Dados.<br>▪ Axios: o Axios foi a biblioteca utilizada no Frontend para realizar a integração à API.<br>▪ Local Storage: utilizei o Local Storage do navegador para armazenar os dados de Login de uma forma mais simples.<br>▪ Render: para fazer deploy da API e do Banco de Dados.<br><br>▪ Outros: outras bibliotecas como o Multer (para upload de arquivos) e Bcrypt (para criptografia das senhas) também foram utilizadas nesse projeto no Backend.",
         "date": "05-29-2023",
         "tech": ["html5", "css3", "javascript", "react", "node js", "postgresql"]
+    },
+    {
+        "link": "https://chatapponline.netlify.app/",
+        "repository": "https://github.com/NielRodrigues/chat-app",
+        "img": "chat-app.png",
+        "title": "ChatApp Online",
+        "description": "Nesse projeto FullStack eu desenvolvi um ChatAPP Online inspirado no WhatsApp Web. O Frontend eu utilizei o ReactJS por sua simplicidade na componentização. E no Backend eu utilizei NodeJS com express para realizar as requisições HTTP. Mas como se trata de um Chat, o servidor necessita de enviar essas emições de dados em tempo real sem a necessida do usuário/cliente ficar fazendo requisições toda hora do servidor, é aí que entra as Websockets que é responsável por fazer essas emições.",
+        "date": "06-14-2023",
+        "tech": ["html5", "css3", "javascript", "react", "node js", "postgresql"]
     }
 ]
